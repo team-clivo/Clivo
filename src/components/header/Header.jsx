@@ -167,7 +167,7 @@ export default function Header() {
         {/* Desktop CTA Button */}
         <Link
           href="/contact"
-          className="hidden lg:block px-6 py-2.5 bg-orange-500 text-white font-semibold rounded-xl hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
+          className="hidden lg:block px-6 py-2.5 bg-orange-600 text-white font-semibold rounded-xl hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-orange-600/25"
         >
           {t('header.contact')}
         </Link>

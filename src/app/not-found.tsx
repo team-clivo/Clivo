@@ -36,7 +36,7 @@ export default function NotFound() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
                         href="/home"
-                        className="px-8 py-3 bg-orange-500 text-white font-bold rounded-full hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-orange-500/20"
+                        className="px-8 py-3 bg-orange-600 text-white font-bold rounded-full hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-orange-500/20"
                     >
                         <Home size={20} />
                         Volver al Inicio

@@ -274,7 +274,7 @@ export default function HomePage() {
                 <span className="text-orange-500 font-bold text-xs sm:text-sm uppercase tracking-widest mb-4 block">{t('home.process.title')}</span>
                 <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
                   {t('home.process.heading.line1')} <br />
-                  <span className="text-white/30">{t('home.process.heading.line2')}</span>
+                  <span className="text-white/60">{t('home.process.heading.line2')}</span>
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-300 font-light leading-relaxed mb-8 sm:mb-12">
                   {t('home.process.description')}

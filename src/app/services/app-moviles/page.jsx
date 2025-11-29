@@ -23,7 +23,7 @@ export default function AppMovilesPage() {
                     <div className="flex flex-wrap gap-4 justify-center">
                         <Link
                             href="/contact"
-                            className="px-8 py-4 bg-orange-500 text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300"
+                            className="px-8 py-4 bg-orange-600 text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300"
                         >
                             Comenzar mi proyecto
                         </Link>
