@@ -8,14 +8,19 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.clivo.tech'),
   title: "Clivo - Desarrollo Web y Móvil",
   description: "Transformamos ideas en aplicaciones web y móviles excepcionales",
   icons: {
@@ -55,6 +60,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
