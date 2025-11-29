@@ -65,7 +65,6 @@ export default function ContactPage() {
         });
       }
     } catch (error) {
-      console.error("Error:", error);
       setStatus({
         type: "error",
         message: t('contactPage.form.status.error.server'),
