@@ -375,7 +375,7 @@ export default function HomePage() {
             {t('home.testimonials.reviews').map((review, i) => (
               <div key={i} className="relative w-72 md:w-96 cursor-pointer overflow-hidden rounded-xl border border-zinc-800 bg-black p-6 md:p-8 hover:border-orange-600 transition-colors mx-4">
                 <div className="flex flex-row items-center gap-4 mb-4">
-                  <img className="rounded-full grayscale" width="48" height="48" alt="" src={`https://avatar.vercel.sh/${review.name.split(' ')[0].toLowerCase()}`} />
+                  <img className="rounded-full grayscale" width="48" height="48" alt={`Avatar de ${review.name}`} src={`https://avatar.vercel.sh/${review.name.split(' ')[0].toLowerCase()}`} />
                   <div className="flex flex-col">
                     <figcaption className="text-base md:text-lg font-bold text-white">{review.name}</figcaption>
                     <p className="text-xs md:text-sm font-medium text-orange-500">{review.role}</p>

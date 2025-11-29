@@ -54,6 +54,48 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Clivo",
+              "url": "https://www.clivo.tech",
+              "logo": "https://www.clivo.tech/logo.png",
+              "description": "Agencia de desarrollo web y aplicaciones móviles en República Dominicana. Transformamos ideas en productos digitales excepcionales.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "DO",
+                "addressLocality": "Santo Domingo",
+                "addressRegion": "Distrito Nacional"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "clivo.contacto@gmail.com",
+                "contactType": "Customer Service",
+                "availableLanguage": ["Spanish", "English", "French"]
+              },
+              "sameAs": [
+                "https://www.instagram.com/teamclivo",
+                "https://github.com/team-clivo"
+              ],
+              "areaServed": {
+                "@type": "Country",
+                "name": "República Dominicana"
+              },
+              "serviceType": [
+                "Desarrollo Web",
+                "Desarrollo de Aplicaciones Móviles",
+                "Diseño UX/UI",
+                "Consultoría Tecnológica",
+                "Cloud & DevOps"
+              ]
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

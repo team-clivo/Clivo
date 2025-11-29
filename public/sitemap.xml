@@ -3,11 +3,13 @@
   <!-- Home Pages -->
   <url>
     <loc>https://www.clivo.tech/</loc>
+    <lastmod>2025-11-29</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://www.clivo.tech/home</loc>
+    <lastmod>2025-11-29</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -15,21 +17,25 @@
   <!-- Main Pages -->
   <url>
     <loc>https://www.clivo.tech/services</loc>
+    <lastmod>2025-11-29</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://www.clivo.tech/portfolio</loc>
+    <lastmod>2025-11-29</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://www.clivo.tech/aboutus</loc>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://www.clivo.tech/contact</loc>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -37,16 +43,19 @@
   <!-- Legal Pages -->
   <url>
     <loc>https://www.clivo.tech/privacy-policy</loc>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://www.clivo.tech/terms-of-service</loc>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://www.clivo.tech/cookies</loc>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
