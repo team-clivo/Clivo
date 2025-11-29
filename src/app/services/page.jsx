@@ -121,7 +121,7 @@ export default function ServicesPage() {
               {t('servicesPage.hero.title.line1')} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">{t('servicesPage.hero.title.highlight')}</span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light px-4">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light px-4">
               {t('servicesPage.hero.description')}
             </p>
           </motion.div>
@@ -156,6 +156,8 @@ export default function ServicesPage() {
                             alt={service.title}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            loading="lazy"
                           />
                           <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                         </div>
@@ -180,7 +182,7 @@ export default function ServicesPage() {
 
                   <h3 className="text-xl text-gray-300 font-medium mb-6">{service.shortDescription}</h3>
 
-                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                  <p className="text-gray-300 text-lg leading-relaxed mb-8">
                     {service.fullDescription}
                   </p>
 
@@ -213,7 +215,7 @@ export default function ServicesPage() {
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             {t('servicesPage.cta.title')}
           </h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
             {t('servicesPage.cta.description')}
           </p>
           <Link

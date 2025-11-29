@@ -151,7 +151,7 @@ export default function Header() {
                     <button
                       key={lang.code}
                       onClick={() => handleLanguageSelect(lang.code)}
-                      className={`w-full px-4 py-2 text-left text-sm flex items-center gap-2 hover:bg-zinc-800 transition-colors ${language === lang.code ? 'text-orange-500 font-medium' : 'text-gray-400'
+                      className={`w-full px-4 py-2 text-left text-sm flex items-center gap-2 hover:bg-zinc-800 transition-colors ${language === lang.code ? 'text-orange-500 font-medium' : 'text-gray-300'
                         }`}
                     >
                       <span>{lang.flag}</span>
@@ -259,7 +259,7 @@ export default function Header() {
                 </motion.div>
 
                 <motion.div variants={linkVariants} className="flex items-center justify-between pt-6 border-t border-white/10">
-                  <div className="text-sm text-gray-500 font-medium">
+                  <div className="text-sm text-gray-300 font-medium">
                     {t('header.rights')}
                   </div>
                   <div className="flex gap-6 items-center">
@@ -286,7 +286,7 @@ export default function Header() {
                               <button
                                 key={lang.code}
                                 onClick={() => handleLanguageSelect(lang.code)}
-                                className={`w-full px-4 py-2 text-left text-sm flex items-center gap-2 hover:bg-zinc-800 transition-colors ${language === lang.code ? 'text-orange-500 font-medium' : 'text-gray-400'
+                                className={`w-full px-4 py-2 text-left text-sm flex items-center gap-2 hover:bg-zinc-800 transition-colors ${language === lang.code ? 'text-orange-500 font-medium' : 'text-gray-300'
                                   }`}
                               >
                                 <span>{lang.flag}</span>
@@ -298,7 +298,7 @@ export default function Header() {
                       </AnimatePresence>
                     </div>
 
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="#" className="text-gray-300 hover:text-white transition-colors">
                       <Instagram className="w-5 h-5" />
                     </a>
                   </div>

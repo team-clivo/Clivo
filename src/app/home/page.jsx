@@ -22,12 +22,20 @@ import {
 } from 'lucide-react';
 import MagneticButton from '../../components/ui/MagneticButton';
 import TextReveal from '../../components/ui/TextReveal';
-import { BentoGrid, BentoGridItem } from '../../components/ui/BentoGrid';
-import Marquee from '../../components/ui/Marquee';
-import VelocityScroll from '../../components/ui/VelocityScroll';
+import dynamic from 'next/dynamic';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { TypewriterEffect } from '../../components/ui/TypewriterEffect';
 import { useLanguage } from '../../context/LanguageContext';
+
+const BentoGrid = dynamic(() => import('../../components/ui/BentoGrid').then(mod => mod.BentoGrid), {
+  ssr: true
+});
+const BentoGridItem = dynamic(() => import('../../components/ui/BentoGrid').then(mod => mod.BentoGridItem), {
+  ssr: true
+});
+const Marquee = dynamic(() => import('../../components/ui/Marquee'), {
+  ssr: false
+});
 
 export default function HomePage() {
   // Hero Parallax & Zoom - Aggressive but Elegant
@@ -60,6 +68,7 @@ export default function HomePage() {
             className="object-cover"
             priority
             quality={100}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/60"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black"></div>
@@ -144,7 +153,7 @@ export default function HomePage() {
                 Soluciones digitales <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">de alto impacto</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto px-4">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
                 Combinamos diseño estratégico y tecnología de punta para crear productos que escalan.
               </p>
             </motion.div>
@@ -267,7 +276,7 @@ export default function HomePage() {
                   {t('home.process.heading.line1')} <br />
                   <span className="text-white/30">{t('home.process.heading.line2')}</span>
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-400 font-light leading-relaxed mb-8 sm:mb-12">
+                <p className="text-lg sm:text-xl text-gray-300 font-light leading-relaxed mb-8 sm:mb-12">
                   {t('home.process.description')}
                 </p>
                 <MagneticButton href="/aboutus" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all duration-300 flex justify-center items-center">
@@ -314,7 +323,7 @@ export default function HomePage() {
                       <span className="text-4xl sm:text-5xl font-bold text-white/10 group-hover:text-orange-500 transition-colors duration-500">{step.num}</span>
                       <h3 className="text-2xl sm:text-3xl font-bold">{step.title}</h3>
                     </div>
-                    <p className="text-gray-400 text-base sm:text-lg group-hover:text-white transition-colors duration-300 font-light">{step.desc}</p>
+                    <p className="text-gray-300 text-base sm:text-lg group-hover:text-white transition-colors duration-300 font-light">{step.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -325,7 +334,7 @@ export default function HomePage() {
         {/* Clients Logo Section - Relocated Here */}
         <section className="py-12 md:py-20 bg-black border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <p className="text-center text-gray-400 font-medium mb-8 sm:mb-12 uppercase tracking-widest text-xs sm:text-sm">{t('home.clients.title')}</p>
+            <p className="text-center text-gray-300 font-medium mb-8 sm:mb-12 uppercase tracking-widest text-xs sm:text-sm">{t('home.clients.title')}</p>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 transition-all duration-500">
               {/* Logo AgroGestor */}
               <a
@@ -339,6 +348,8 @@ export default function HomePage() {
                   alt="AgroGestor"
                   fill
                   className="object-contain p-2"
+                  sizes="(max-width: 768px) 128px, 192px"
+                  loading="lazy"
                 />
               </a>
 
@@ -352,6 +363,8 @@ export default function HomePage() {
                   alt="Dashbite"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 128px, 192px"
+                  loading="lazy"
                 />
               </a>
 
@@ -381,7 +394,7 @@ export default function HomePage() {
                     <p className="text-xs md:text-sm font-medium text-orange-500">{review.role}</p>
                   </div>
                 </div>
-                <blockquote className="text-sm md:text-base text-gray-400 leading-relaxed">"{review.text}"</blockquote>
+                <blockquote className="text-sm md:text-base text-gray-300 leading-relaxed">"{review.text}"</blockquote>
               </div>
             ))}
           </Marquee>
@@ -400,7 +413,7 @@ export default function HomePage() {
             >
               {t('home.cta.title')}
             </motion.h2>
-            <p className="text-lg sm:text-xl text-gray-400 mb-10 sm:mb-12 max-w-2xl mx-auto font-light px-4">
+            <p className="text-lg sm:text-xl text-gray-300 mb-10 sm:mb-12 max-w-2xl mx-auto font-light px-4">
               {t('home.cta.description')}
             </p>
 
@@ -414,15 +427,15 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 border-t border-white/10 pt-8 sm:pt-12">
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-white mb-2">24h</div>
-                <div className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest">{t('home.cta.stats.response')}</div>
+                <div className="text-gray-300 text-xs sm:text-sm uppercase tracking-widest">{t('home.cta.stats.response')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-white mb-2">100%</div>
-                <div className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest">{t('home.cta.stats.free')}</div>
+                <div className="text-gray-300 text-xs sm:text-sm uppercase tracking-widest">{t('home.cta.stats.free')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-white mb-2">ROI</div>
-                <div className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest">{t('home.cta.stats.focus')}</div>
+                <div className="text-gray-300 text-xs sm:text-sm uppercase tracking-widest">{t('home.cta.stats.focus')}</div>
               </div>
             </div>
           </div>

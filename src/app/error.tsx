@@ -30,7 +30,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
                 <h2 className="text-3xl font-bold text-white mb-4">
                     Algo salió mal
                 </h2>
-                <p className="text-gray-400 mb-8">
+                <p className="text-gray-300 mb-8">
                     Ha ocurrido un error inesperado. Nuestro equipo ha sido notificado.
                     Por favor, intenta recargar la página.
                 </p>

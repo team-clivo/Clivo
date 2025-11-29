@@ -28,7 +28,7 @@ export default function NotFound() {
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                     Página no encontrada
                 </h2>
-                <p className="text-gray-400 text-lg mb-10">
+                <p className="text-gray-300 text-lg mb-10">
                     Lo sentimos, la página que estás buscando no existe o ha sido movida.
                     Parece que te has perdido en el espacio digital.
                 </p>

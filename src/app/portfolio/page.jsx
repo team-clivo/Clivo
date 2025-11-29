@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ExternalLink, X, Rocket, Sparkles, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import { useLanguage } from '../../context/LanguageContext';
@@ -118,7 +119,7 @@ export default function PortfolioPage() {
               {t('portfolioPage.hero.title.highlight')}
             </span>
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
             {t('portfolioPage.hero.description')}
           </p>
         </div>
@@ -130,8 +131,8 @@ export default function PortfolioPage() {
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 border ${activeCategory === category.id
-                  ? "bg-orange-500 text-white border-orange-500"
-                  : "bg-white/5 text-gray-400 border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20"
+                ? "bg-orange-500 text-white border-orange-500"
+                : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20"
                 }`}
             >
               {category.label}
@@ -153,10 +154,13 @@ export default function PortfolioPage() {
                   >
                     {/* Image Container */}
                     <div className="relative h-64 w-full overflow-hidden bg-zinc-800">
-                      <img
+                      <Image
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent"></div>
 
@@ -184,7 +188,7 @@ export default function PortfolioPage() {
                         </p>
                       </div>
 
-                      <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                      <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
                         {project.shortDescription}
                       </p>
 
@@ -201,13 +205,13 @@ export default function PortfolioPage() {
                         {project.tags.slice(0, 3).map((tag, i) => (
                           <span
                             key={i}
-                            className="text-xs px-3 py-1 bg-white/5 text-gray-400 rounded-md border border-white/10"
+                            className="text-xs px-3 py-1 bg-white/5 text-gray-300 rounded-md border border-white/10"
                           >
                             {tag}
                           </span>
                         ))}
                         {project.tags.length > 3 && (
-                          <span className="text-xs px-3 py-1 text-gray-500">
+                          <span className="text-xs px-3 py-1 text-gray-300">
                             +{project.tags.length - 3}
                           </span>
                         )}
@@ -220,7 +224,7 @@ export default function PortfolioPage() {
 
                     <div className="w-16 h-16 bg-white/5 rounded-xl flex items-center justify-center mb-6 relative z-10">
                       {project.icon && (
-                        <project.icon className="w-8 h-8 text-gray-500" />
+                        <project.icon className="w-8 h-8 text-gray-300" />
                       )}
                     </div>
 
@@ -230,12 +234,12 @@ export default function PortfolioPage() {
                     <p className="text-orange-500/70 text-sm font-medium mb-4 relative z-10">
                       {project.subtitle}
                     </p>
-                    <p className="text-gray-500 text-sm mb-6 relative z-10">
+                    <p className="text-gray-300 text-sm mb-6 relative z-10">
                       {project.description}
                     </p>
 
                     <div className="relative z-10">
-                      <span className="text-xs px-3 py-1.5 bg-white/5 text-gray-500 rounded-md border border-white/10">
+                      <span className="text-xs px-3 py-1.5 bg-white/5 text-gray-300 rounded-md border border-white/10">
                         {getCategoryTranslation(project.category)}
                       </span>
                     </div>
@@ -247,7 +251,7 @@ export default function PortfolioPage() {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">
+              <p className="text-gray-300 text-lg">
                 {t('portfolioPage.ui.noProjects')}
               </p>
             </div>
@@ -261,7 +265,7 @@ export default function PortfolioPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('portfolioPage.ui.cta.title')}
           </h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
             {t('portfolioPage.ui.cta.description')}
           </p>
 
@@ -295,10 +299,13 @@ export default function PortfolioPage() {
             <div className="overflow-y-auto max-h-[85vh]">
               {/* Hero Image */}
               <div className="relative h-64 w-full bg-zinc-800">
-                <img
+                <Image
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/70 to-transparent"></div>
 

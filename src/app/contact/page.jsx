@@ -92,7 +92,7 @@ export default function ContactPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             {t('contactPage.hero.title.line1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">{t('contactPage.hero.title.highlight')}</span>
           </h1>
-          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto px-4">
+          <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto px-4">
             {t('contactPage.hero.description')}
           </p>
         </motion.div>
@@ -296,7 +296,7 @@ export default function ContactPage() {
 
           {/* Email directo */}
           <div className="mt-6 pt-6 border-t border-white/10">
-            <p className="text-center text-gray-400 text-sm">
+            <p className="text-center text-gray-300 text-sm">
               {t('contactPage.footer.text')}{" "}
               <a href="mailto:hola@clivo.com" className="text-orange-500 hover:text-orange-400 font-medium transition-colors">
                 clivo.contacto@gmail.com

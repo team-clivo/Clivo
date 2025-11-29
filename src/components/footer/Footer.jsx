@@ -20,15 +20,15 @@ export default function Footer() {
                                 className="h-20 w-auto"
                             />
                         </div>
-                        <p className="text-gray-400 leading-relaxed mb-6">
+                        <p className="text-gray-300 leading-relaxed mb-6">
                             {t('footer.description')}
                         </p>
                         <div className="flex gap-4">
-                            <a 
-                                href="https://www.instagram.com/teamclivo" 
+                            <a
+                                href="https://www.instagram.com/teamclivo"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors" 
+                                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
                                 aria-label="Instagram"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -42,11 +42,11 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-6">{t('footer.services.title')}</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/services" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.services.items.web')}</Link></li>
-                            <li><Link href="/services" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.services.items.mobile')}</Link></li>
-                            <li><Link href="/services" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.services.items.uiux')}</Link></li>
-                            <li><Link href="/services" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.services.items.cloud')}</Link></li>
-                            <li><Link href="/services" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.services.items.ai')}</Link></li>
+                            <li><Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.services.items.web')}</Link></li>
+                            <li><Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.services.items.mobile')}</Link></li>
+                            <li><Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.services.items.uiux')}</Link></li>
+                            <li><Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.services.items.cloud')}</Link></li>
+                            <li><Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.services.items.ai')}</Link></li>
                         </ul>
                     </div>
 
@@ -54,16 +54,16 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-6">{t('footer.company.title')}</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/portfolio" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.company.items.portfolio')}</Link></li>
-                            <li><Link href="/aboutus" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.company.items.about')}</Link></li>
-                            <li><Link href="/contact" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.company.items.contact')}</Link></li>
+                            <li><Link href="/portfolio" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.company.items.portfolio')}</Link></li>
+                            <li><Link href="/aboutus" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.company.items.about')}</Link></li>
+                            <li><Link href="/contact" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.company.items.contact')}</Link></li>
                         </ul>
                     </div>
 
                     {/* Contact */}
                     <div>
                         <h3 className="text-lg font-bold mb-6">{t('footer.contact.title')}</h3>
-                        <ul className="space-y-3 text-gray-400">
+                        <ul className="space-y-3 text-gray-300">
                             <li className="flex items-start gap-2">
                                 <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                                     <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -90,13 +90,13 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-800">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-gray-400 text-sm">
+                        <p className="text-gray-300 text-sm">
                             {t('footer.rights')}
                         </p>
                         <div className="flex gap-6 text-sm">
-                            <Link href="/privacy-policy" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.legal.privacy')}</Link>
-                            <Link href="/terms-of-service" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.legal.terms')}</Link>
-                            <Link href="/cookies" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.legal.cookies')}</Link>
+                            <Link href="/privacy-policy" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.legal.privacy')}</Link>
+                            <Link href="/terms-of-service" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.legal.terms')}</Link>
+                            <Link href="/cookies" className="text-gray-300 hover:text-orange-500 transition-colors">{t('footer.legal.cookies')}</Link>
                         </div>
                     </div>
                 </div>

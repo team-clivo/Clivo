@@ -35,7 +35,7 @@ export default function AboutPage() {
               {t('about.hero.title.line1')} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">{t('about.hero.title.line2')}</span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light mb-8 sm:mb-10 px-4">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light mb-8 sm:mb-10 px-4">
               {t('about.hero.description')}
             </p>
           </motion.div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
                 <div className="text-4xl lg:text-5xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-sm text-gray-500 uppercase tracking-widest">{stat.label}</div>
+                <div className="text-sm text-gray-300 uppercase tracking-widest">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -80,10 +80,10 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold text-white mb-6">
                 {t('about.who_we_are.title.main')} <span className="text-orange-500">{t('about.who_we_are.title.highlight')}</span>.
               </h2>
-              <p className="text-gray-400 text-lg leading-relaxed mb-6">
+              <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 {t('about.who_we_are.p1')}
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed">
                 {t('about.who_we_are.p2')}
               </p>
             </motion.div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
           >
             <span className="text-orange-500 font-bold text-sm uppercase tracking-widest mb-4 block">{t('about.team.badge')}</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">{t('about.team.title')}</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               {t('about.team.description')}
             </p>
           </motion.div>
@@ -157,16 +157,17 @@ export default function AboutPage() {
                     alt="Luis Alburquerque"
                     fill
                     className="object-cover"
+                    sizes="160px"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-1">Luis Alburquerque</h3>
                 <p className="text-orange-500 text-xs font-bold uppercase tracking-widest mb-4">{t('about.team.founders.luis.role')}</p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
+                <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-sm">
                   {t('about.team.founders.luis.bio')}
                 </p>
                 <div className="flex gap-4 mt-auto">
-                  <a href="https://www.linkedin.com/in/luisalburquerque/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors"><Linkedin size={20} /></a>
-                  <a href="https://github.com/alburqdev" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors"><Github size={20} /></a>
+                  <a href="https://www.linkedin.com/in/luisalburquerque/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors"><Linkedin size={20} /></a>
+                  <a href="https://github.com/alburqdev" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors"><Github size={20} /></a>
                 </div>
               </div>
             </motion.div>
@@ -187,16 +188,17 @@ export default function AboutPage() {
                     alt="Emil Echavarría"
                     fill
                     className="object-cover"
+                    sizes="160px"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-1">Emil Echavarría</h3>
                 <p className="text-orange-500 text-xs font-bold uppercase tracking-widest mb-4">{t('about.team.founders.emil.role')}</p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
+                <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-sm">
                   {t('about.team.founders.emil.bio')}
                 </p>
                 <div className="flex gap-4 mt-auto">
-                  <a href="https://www.linkedin.com/in/emil-echavarria/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors"><Linkedin size={20} /></a>
-                  <a href="https://github.com/EmilEchavarria" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors"><Github size={20} /></a>
+                  <a href="https://www.linkedin.com/in/emil-echavarria/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors"><Linkedin size={20} /></a>
+                  <a href="https://github.com/EmilEchavarria" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors"><Github size={20} /></a>
                 </div>
               </div>
             </motion.div>
@@ -251,7 +253,7 @@ export default function AboutPage() {
                     <Icon size={24} />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{value.text}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">{value.text}</p>
                 </motion.div>
               );
             })}
@@ -265,7 +267,7 @@ export default function AboutPage() {
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-8">
             {t('about.cta.title')}
           </h2>
-          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
             {t('about.cta.description')}
           </p>
           <div className="flex justify-center">
