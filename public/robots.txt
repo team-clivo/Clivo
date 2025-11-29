@@ -1,0 +1,376 @@
+# robots.txt para Clivo.tech
+# Actualizado: 2025-11-29
+# Este archivo controla cómo los motores de búsqueda rastrean el sitio
+
+# =============================================================================
+# GOOGLE BOT - Motor de búsqueda principal
+# =============================================================================
+User-agent: Googlebot
+Allow: /
+# Permitir recursos estáticos y Next.js assets (NECESARIO para renderizado)
+Allow: /_next/
+Allow: /static/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+# Bloquear solo APIs privadas
+Disallow: /api/private/
+Disallow: /api/admin/
+Crawl-delay: 0
+
+# =============================================================================
+# GOOGLE BOT ESPECÍFICOS
+# =============================================================================
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Google Mobile Bot
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Google Video Bot
+User-agent: Googlebot-Video
+Allow: /
+
+# Google News Bot
+User-agent: Googlebot-News
+Allow: /
+
+# =============================================================================
+# BING BOT
+# =============================================================================
+User-agent: Bingbot
+Allow: /
+Allow: /_next/
+Allow: /static/
+Disallow: /api/private/
+Disallow: /api/admin/
+Crawl-delay: 1
+
+# Bing Mobile Bot
+User-agent: msnbot-media
+Allow: /
+
+# =============================================================================
+# OTROS MOTORES DE BÚSQUEDA PRINCIPALES
+# =============================================================================
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Disallow: /api/private/
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/private/
+Crawl-delay: 0
+
+# Baidu (China)
+User-agent: Baiduspider
+Allow: /
+Disallow: /api/private/
+Crawl-delay: 2
+
+# Yandex (Rusia)
+User-agent: YandexBot
+Allow: /
+Disallow: /api/private/
+Crawl-delay: 1
+
+# Yandex Images
+User-agent: YandexImages
+Allow: /
+
+# =============================================================================
+# REDES SOCIALES Y CRAWLERS DE CONTENIDO
+# =============================================================================
+
+# Facebook Bot (para previews de enlaces)
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter Bot (para previews de enlaces)
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn Bot
+User-agent: LinkedInBot
+Allow: /
+
+# Pinterest Bot
+User-agent: Pinterestbot
+Allow: /
+
+# WhatsApp Bot
+User-agent: WhatsApp
+Allow: /
+
+# Telegram Bot
+User-agent: TelegramBot
+Allow: /
+
+# =============================================================================
+# CRAWLERS DE IA Y HERRAMIENTAS
+# =============================================================================
+
+# OpenAI GPT Bot
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT User (Plugin)
+User-agent: ChatGPT-User
+Allow: /
+
+# Common Crawl (archivo web)
+User-agent: CCBot
+Allow: /
+
+# Internet Archive (Wayback Machine) - ÚNICA REGLA
+User-agent: ia_archiver
+Allow: /
+Crawl-delay: 2
+
+# Ahrefs Bot (SEO tool) - ÚNICA REGLA, moderado
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+# SEMrush Bot (SEO tool)
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+# Moz Bot (SEO tool)
+User-agent: rogerbot
+Allow: /
+Crawl-delay: 2
+
+# Screaming Frog SEO Spider
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+# =============================================================================
+# CRAWLERS DE COMERCIO Y COMPARACIÓN
+# =============================================================================
+
+# Amazon Bot
+User-agent: Amazonbot
+Allow: /
+
+# Apple Bot (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+
+# =============================================================================
+# CRAWLERS NO DESEADOS Y SPAM
+# =============================================================================
+
+# Bloquear bots maliciosos y scrapers agresivos
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: Mail.RU_Bot
+Disallow: /
+
+User-agent: spbot
+Disallow: /
+
+User-agent: SurveyBot
+Disallow: /
+
+User-agent: linkdexbot
+Disallow: /
+
+User-agent: ZoomBot
+Disallow: /
+
+User-agent: gigabot
+Disallow: /
+
+User-agent: emailcollector
+Disallow: /
+
+User-agent: emailsiphon
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: CopyRightCheck
+Disallow: /
+
+User-agent: Crescent
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: ProWebWalker
+Disallow: /
+
+User-agent: CheeseBot
+Disallow: /
+
+User-agent: LNSpiderguy
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: WebSauger
+Disallow: /
+
+User-agent: WebWhacker
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: BackDoorBot
+Disallow: /
+
+User-agent: Black Hole
+Disallow: /
+
+User-agent: BlowFish
+Disallow: /
+
+User-agent: BotALot
+Disallow: /
+
+User-agent: BuiltBotTough
+Disallow: /
+
+User-agent: Bullseye
+Disallow: /
+
+User-agent: BunnySlippers
+Disallow: /
+
+User-agent: Cegbfeieh
+Disallow: /
+
+# =============================================================================
+# CONFIGURACIÓN GLOBAL PARA TODOS LOS BOTS
+# =============================================================================
+User-agent: *
+# Permitir todo por defecto
+Allow: /
+
+# Permitir recursos estáticos necesarios para indexación (Next.js)
+Allow: /_next/
+Allow: /static/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Bloquear solo rutas privadas específicas
+Disallow: /api/private/
+Disallow: /api/admin/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /_vercel/
+
+# Bloquear solo parámetros de tracking/sesión específicos (NO todos)
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+Disallow: /*?session=*
+Disallow: /*?sid=*
+Disallow: /*&utm_*
+Disallow: /*&fbclid=*
+Disallow: /*&gclid=*
+
+# Bloquear archivos de configuración sensibles
+Disallow: /.env
+Disallow: /.env.local
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.history/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig.json
+Disallow: /next.config.*
+
+# =============================================================================
+# SITEMAPS - Ubicaciones de los mapas del sitio
+# =============================================================================
+Sitemap: https://www.clivo.tech/sitemap.xml
+
+# =============================================================================
+# HOST (para Yandex)
+# =============================================================================
+Host: clivo.tech
+
+# =============================================================================
+# NOTAS Y DOCUMENTACIÓN
+# =============================================================================
+# ✅ Este archivo corrige los problemas identificados:
+# 1. ✅ Sin reglas duplicadas (AhrefsBot, ia_archiver únicos)
+# 2. ✅ /_next/ y /static/ PERMITIDOS para Google (necesario para renderizado)
+# 3. ✅ Parámetros: solo bloqueamos tracking (utm_, fbclid, gclid), NO todos
+#
+# - Este archivo sigue el estándar robots.txt (RFC 9309)
+# - Los bots pueden ignorar estas reglas (no son obligatorias legalmente)
+# - Verificar en: https://search.google.com/search-console
+# =============================================================================
