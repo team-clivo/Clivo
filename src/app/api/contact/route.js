@@ -76,7 +76,7 @@ export async function POST(req) {
       JSON.stringify({ success: true, message: "Correo enviado con éxito." }),
       { status: 200 }
     );
-  } catch (error) {
+  } catch {
     return new Response(
       JSON.stringify({ success: false, message: "Error al enviar el correo." }),
       { status: 500 }

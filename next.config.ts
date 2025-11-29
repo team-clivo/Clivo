@@ -43,9 +43,9 @@ const nextConfig: NextConfig = {
   },
 
   // Optimizaciones experimentales
-  experimental: {
-    optimizeCss: true,
-  },
+  // experimental: {
+  //   optimizeCss: true,
+  // },
 
   // Configuración de compilación
   poweredByHeader: false,
