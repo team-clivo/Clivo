@@ -24,7 +24,10 @@ export const metadata: Metadata = {
   title: "Clivo - Desarrollo Web y Móvil",
   description: "Transformamos ideas en aplicaciones web y móviles excepcionales",
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', sizes: '256x256', type: 'image/png' },
+    ],
     shortcut: '/favicon.ico',
     apple: '/clivolittle.png', // Using PNG for better quality on Apple devices
   },
