@@ -170,5 +170,91 @@ export const servicesTranslations = {
                 button: "Let's talk about your project"
             }
         }
+    },
+    fr: {
+        servicesPage: {
+            hero: {
+                badge: "Nos Solutions",
+                title: {
+                    line1: "Services conçus pour",
+                    highlight: "faire évoluer votre entreprise"
+                },
+                description: "Nous combinons stratégie, design et technologie pour livrer des produits numériques qui font la différence."
+            },
+            list: {
+                web: {
+                    title: "Développement Web",
+                    shortDescription: "Votre présence numérique professionnelle.",
+                    fullDescription: "Nous créons des sites web modernes et attrayants qui représentent votre marque de manière professionnelle. Nous nous assurons qu'ils sont rapides, faciles à utiliser et fonctionnent parfaitement sur tous les appareils, afin que vos clients aient la meilleure expérience possible.",
+                    features: {
+                        f1: "Sites Web Professionnels",
+                        f2: "Boutiques en Ligne",
+                        f3: "Portails Clients",
+                        f4: "Référencement Google"
+                    }
+                },
+                mobile: {
+                    title: "Applications Mobiles",
+                    shortDescription: "Atteignez vos clients où qu'ils soient.",
+                    fullDescription: "Nous développons des applications mobiles que vos clients peuvent utiliser à tout moment. Que ce soit pour acheter, faire des réservations ou gérer des services, nous créons des applications intuitives qui fonctionnent sur iPhone et Android, rendant votre entreprise plus accessible.",
+                    features: {
+                        f1: "Applications iPhone et Android",
+                        f2: "Faciles à Utiliser",
+                        f3: "Notifications aux Clients",
+                        f4: "Support Continu"
+                    }
+                },
+                uiux: {
+                    title: "Design UX/UI",
+                    shortDescription: "Design qui connecte avec vos clients.",
+                    fullDescription: "Nous concevons des expériences numériques en pensant à vos utilisateurs. Nous nous assurons que chaque bouton, menu et écran est facile à comprendre et agréable à utiliser. Un bon design signifie plus de clients satisfaits et de meilleurs résultats pour votre entreprise.",
+                    features: {
+                        f1: "Design Centré sur l'Utilisateur",
+                        f2: "Prototypes Interactifs",
+                        f3: "Design Cohérent",
+                        f4: "Amélioration de l'Expérience"
+                    }
+                },
+                cloud: {
+                    title: "Cloud & DevOps",
+                    shortDescription: "Technologie prête à évoluer avec vous.",
+                    fullDescription: "Nous nous assurons que votre plateforme numérique est toujours disponible, sécurisée et peut évoluer selon les besoins de votre entreprise. Nous gérons toute l'infrastructure technologique pour que vous puissiez vous concentrer sur ce qui compte vraiment : vos clients.",
+                    features: {
+                        f1: "Hébergement Cloud",
+                        f2: "Mises à Jour Automatiques",
+                        f3: "Sécurité et Sauvegardes",
+                        f4: "Surveillance 24/7"
+                    }
+                },
+                ai: {
+                    title: "IA & Automatisation",
+                    shortDescription: "Gagnez du temps avec la technologie intelligente.",
+                    fullDescription: "Nous mettons en œuvre des solutions intelligentes qui automatisent les tâches répétitives de votre entreprise. Des assistants virtuels qui répondent aux questions aux systèmes qui organisent automatiquement les informations, nous libérons du temps pour que votre équipe se concentre sur la stratégie.",
+                    features: {
+                        f1: "Assistants Virtuels",
+                        f2: "Chatbots pour le Service Client",
+                        f3: "Automatisation des Tâches",
+                        f4: "Rapports Automatiques"
+                    }
+                },
+                systems: {
+                    title: "Systèmes de Gestion",
+                    shortDescription: "Organisez et contrôlez votre entreprise.",
+                    fullDescription: "Nous créons des logiciels personnalisés pour gérer votre entreprise efficacement. Du contrôle des ventes et des clients à la gestion des stocks, nous développons des outils qui centralisent vos informations et vous aident à prendre de meilleures décisions pour faire croître votre entreprise.",
+                    features: {
+                        f1: "Gestion des Clients",
+                        f2: "Contrôle des Stocks",
+                        f3: "Rapports de Ventes",
+                        f4: "Intégration des Données"
+                    }
+                },
+                requestButton: "Demander ce service"
+            },
+            cta: {
+                title: "Vous ne trouvez pas ce que vous cherchez ?",
+                description: "Nous adorons les défis. Parlez-nous de votre idée et nous concevrons une solution sur mesure pour vous.",
+                button: "Parlons de votre projet"
+            }
+        }
     }
 };

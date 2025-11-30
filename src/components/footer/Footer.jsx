@@ -2,10 +2,12 @@
 import React from 'react';
 import Link from "next/link";
 import { useLanguage } from '../../context/LanguageContext';
+import { useTheme } from '../../context/ThemeContext';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     const { t } = useLanguage();
+    const { theme } = useTheme();
 
     return (
         <footer className="bg-[#0a0a0a] text-white py-16 px-6">
@@ -15,7 +17,7 @@ export default function Footer() {
                     <div>
                         <div className="mb-6">
                             <img
-                                src="/clivolittle.png"
+                                src={theme === 'light' ? '/littledark.png' : '/clivolittle.png'}
                                 alt="Clivo logo"
                                 className="h-20 w-auto"
                             />

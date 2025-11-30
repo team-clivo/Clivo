@@ -100,7 +100,7 @@ export default function PortfolioPage() {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="portfolio-page min-h-screen bg-black text-white">
       <Header />
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-6 overflow-hidden">
@@ -125,7 +125,7 @@ export default function PortfolioPage() {
         </div>
 
         {/* Filter Bar */}
-        <div className="relative z-10 flex flex-wrap justify-center gap-3">
+        <div className="portfolio-categories relative z-10 flex flex-wrap justify-center gap-3">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
 
                       {/* Category Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1.5 bg-black/70 backdrop-blur-md text-xs font-medium text-white rounded-lg border border-white/20">
+                        <span className="project-category-badge px-3 py-1.5 bg-black/70 backdrop-blur-md text-xs font-medium text-white rounded-lg border border-white/20">
                           {getCategoryTranslation(project.category)}
                         </span>
                       </div>
@@ -239,7 +239,7 @@ export default function PortfolioPage() {
                     </p>
 
                     <div className="relative z-10">
-                      <span className="text-xs px-3 py-1.5 bg-white/5 text-gray-300 rounded-md border border-white/10">
+                      <span className="project-category-badge text-xs px-3 py-1.5 bg-white/5 text-gray-300 rounded-md border border-white/10">
                         {getCategoryTranslation(project.category)}
                       </span>
                     </div>
@@ -271,7 +271,7 @@ export default function PortfolioPage() {
 
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300"
+            className="portfolio-cta-btn inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300"
           >
             {t('portfolioPage.ui.cta.button')}
             <ArrowUpRight className="w-5 h-5" />
@@ -287,10 +287,10 @@ export default function PortfolioPage() {
             onClick={() => setSelectedProject(null)}
           ></div>
 
-          <div className="relative bg-zinc-900 border border-white/10 rounded-2xl max-w-4xl w-full max-h-[85vh] overflow-hidden shadow-2xl">
+          <div className="project-modal relative bg-zinc-900 border border-white/10 rounded-2xl max-w-4xl w-full max-h-[85vh] overflow-hidden shadow-2xl">
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 z-20 p-2 bg-black/50 hover:bg-black/70 rounded-lg text-white transition-all duration-300 border border-white/10"
+              className="close-modal-btn absolute top-4 right-4 z-20 p-2 bg-black/50 hover:bg-black/70 rounded-lg text-white transition-all duration-300 border border-white/10"
             >
               <X className="w-5 h-5" />
             </button>
@@ -379,7 +379,7 @@ export default function PortfolioPage() {
                       href={selectedProject.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300"
+                      className="view-project-btn flex items-center justify-center gap-2 w-full px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300"
                     >
                       {t('portfolioPage.ui.viewProject')}
                       <ExternalLink className="w-4 h-4" />

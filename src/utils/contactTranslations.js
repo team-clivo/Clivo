@@ -142,5 +142,77 @@ export const contactTranslations = {
                 text: "You can also write to us at"
             }
         }
+    },
+    fr: {
+        contactPage: {
+            hero: {
+                badge: "Contactez-nous",
+                title: {
+                    line1: "Donnons vie à",
+                    highlight: "votre idée"
+                },
+                description: "Parlez-nous de votre projet et nous vous contacterons bientôt"
+            },
+            form: {
+                name: {
+                    label: "Nom complet",
+                    placeholder: "Jean Dupont"
+                },
+                company: {
+                    label: "Entreprise / Commerce",
+                    placeholder: "Clivo SARL"
+                },
+                email: {
+                    label: "Adresse e-mail",
+                    placeholder: "email@entreprise.com"
+                },
+                phone: {
+                    label: "Téléphone",
+                    placeholder: "+33 1 23 45 67 89"
+                },
+                service: {
+                    label: "Service qui vous intéresse",
+                    placeholder: "Sélectionnez un service",
+                    options: {
+                        web: "Développement Web",
+                        mobile: "Applications Mobiles",
+                        uiux: "Design UX/UI",
+                        cloud: "Cloud & DevOps",
+                        ai: "IA & Automatisation",
+                        maintenance: "Maintenance"
+                    }
+                },
+                budget: {
+                    label: "Budget estimé",
+                    placeholder: "Sélectionnez une fourchette",
+                    options: {
+                        range1: "100 $ - 500 $",
+                        range2: "500 $ - 1 000 $",
+                        range3: "1 000 $ - 3 000 $",
+                        range4: "Plus de 3 000 $"
+                    }
+                },
+                message: {
+                    label: "Parlez-nous de votre projet",
+                    placeholder: "Décrivez votre projet, vos objectifs et tout détail important..."
+                },
+                status: {
+                    error: {
+                        required: "Veuillez compléter les champs requis.",
+                        send: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.",
+                        server: "Erreur serveur. Veuillez réessayer plus tard."
+                    },
+                    loading: "Envoi de la demande...",
+                    success: "Message envoyé avec succès ! Nous vous contacterons bientôt."
+                },
+                button: {
+                    default: "Envoyer la demande",
+                    loading: "Envoi en cours..."
+                }
+            },
+            footer: {
+                text: "Vous pouvez également nous écrire à"
+            }
+        }
     }
 };

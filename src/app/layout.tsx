@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "../context/LanguageContext";
+import { ThemeProvider } from "../context/ThemeContext";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -132,9 +133,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <LanguageProvider>
-          {children}
-          <Analytics />
-          <SpeedInsights />
+          <ThemeProvider>
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </ThemeProvider>
         </LanguageProvider>
       </body>
     </html>

@@ -204,5 +204,108 @@ export const legalTranslations = {
                 }
             }
         }
+    },
+    fr: {
+        legal: {
+            privacy: {
+                title: "Politique de Confidentialité",
+                intro: {
+                    title: "1. Introduction",
+                    text: "Chez Clivo, nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles. Cette politique de confidentialité vous informera sur la façon dont nous prenons soin de vos données personnelles lorsque vous visitez notre site web et vous informera de vos droits en matière de confidentialité et de la façon dont la loi vous protège."
+                },
+                data: {
+                    title: "2. Données que nous collectons",
+                    text: "Nous pouvons collecter, utiliser, stocker et transférer différents types de données personnelles vous concernant, que nous avons regroupés comme suit :",
+                    items: {
+                        identity: "Données d'Identité : comprend le prénom, le nom, le nom d'utilisateur ou un identifiant similaire.",
+                        contact: "Données de Contact : comprend l'adresse e-mail et les numéros de téléphone.",
+                        technical: "Données Techniques : comprend l'adresse de protocole Internet (IP), vos données de connexion, le type et la version du navigateur, le réglage du fuseau horaire et l'emplacement, les types et versions de plug-ins du navigateur, le système d'exploitation et la plateforme et d'autres technologies sur les appareils que vous utilisez pour accéder à ce site web.",
+                        usage: "Données d'Utilisation : comprend des informations sur la façon dont vous utilisez notre site web, nos produits et services."
+                    }
+                },
+                usage: {
+                    title: "3. Comment nous utilisons vos données",
+                    text: "Nous n'utiliserons vos données personnelles que lorsque la loi nous le permet. Le plus souvent, nous utiliserons vos données personnelles dans les circonstances suivantes :",
+                    items: {
+                        contract: "Lorsque nous devons exécuter le contrat que nous sommes sur le point de conclure ou que nous avons conclu avec vous.",
+                        legitimate: "Lorsque cela est nécessaire pour nos intérêts légitimes (ou ceux d'un tiers) et que vos intérêts et droits fondamentaux ne prévalent pas sur ces intérêts.",
+                        legal: "Lorsque nous devons nous conformer à une obligation légale ou réglementaire."
+                    }
+                },
+                security: {
+                    title: "4. Sécurité des données",
+                    text: "Nous avons mis en place des mesures de sécurité appropriées pour empêcher que vos données personnelles ne soient perdues accidentellement, utilisées ou consultées de manière non autorisée, modifiées ou divulguées. De plus, nous limitons l'accès à vos données personnelles aux employés, agents, sous-traitants et autres tiers qui ont un besoin professionnel de les connaître."
+                },
+                rights: {
+                    title: "5. Vos droits légaux",
+                    text: "Dans certaines circonstances, vous disposez de droits en vertu des lois sur la protection des données concernant vos données personnelles, y compris le droit de demander l'accès, la correction, l'effacement, la restriction, le transfert, l'opposition au traitement et la portabilité des données."
+                },
+                contact: {
+                    title: "6. Contact",
+                    text: "Si vous avez des questions concernant cette politique de confidentialité ou nos pratiques de confidentialité, veuillez nous contacter à :"
+                }
+            },
+            terms: {
+                title: "Conditions d'Utilisation",
+                acceptance: {
+                    title: "1. Acceptation des Conditions",
+                    text: "En accédant et en utilisant le site web de Clivo, vous acceptez d'être lié par ces Conditions d'Utilisation et par toutes les lois et réglementations applicables. Si vous n'êtes pas d'accord avec l'une de ces conditions, il vous est interdit d'utiliser ou d'accéder à ce site."
+                },
+                license: {
+                    title: "2. Licence d'Utilisation",
+                    text: "L'autorisation est accordée de télécharger temporairement une copie des matériaux (informations ou logiciels) sur le site web de Clivo uniquement pour une visualisation personnelle et non commerciale transitoire. Il s'agit de l'octroi d'une licence, et non d'un transfert de titre, et en vertu de cette licence, vous ne pouvez pas :",
+                    items: {
+                        modify: "Modifier ou copier les matériaux.",
+                        commercial: "Utiliser les matériaux à des fins commerciales ou pour toute exposition publique (commerciale ou non commerciale).",
+                        reverse: "Tenter de décompiler ou d'effectuer une ingénierie inverse de tout logiciel contenu sur le site web de Clivo.",
+                        remove: "Supprimer tout droit d'auteur ou autres mentions de propriété des matériaux."
+                    }
+                },
+                ip: {
+                    title: "3. Propriété Intellectuelle",
+                    text: "Le Service et son contenu, ses fonctionnalités et ses fonctionnalités originales sont et resteront la propriété exclusive de Clivo et de ses concédants de licence. Le Service est protégé par le droit d'auteur, les marques déposées et d'autres lois de la République Dominicaine et des pays étrangers."
+                },
+                liability: {
+                    title: "4. Limitation de Responsabilité",
+                    text: "En aucun cas, Clivo ou ses fournisseurs ne seront responsables de tout dommage (y compris, sans limitation, les dommages pour perte de données ou de profit, ou en raison d'une interruption d'activité) découlant de l'utilisation ou de l'impossibilité d'utiliser les matériaux sur le site web de Clivo, même si Clivo ou un représentant autorisé de Clivo a été informé oralement ou par écrit de la possibilité de tels dommages."
+                },
+                modifications: {
+                    title: "5. Modifications",
+                    text: "Clivo peut réviser ces conditions d'utilisation pour son site web à tout moment sans préavis. En utilisant ce site web, vous acceptez d'être lié par la version actuelle de ces conditions d'utilisation."
+                }
+            },
+            cookies: {
+                title: "Politique de Cookies",
+                what: {
+                    title: "1. Que sont les cookies ?",
+                    text: "Les cookies sont de petits fichiers texte que les sites web que vous visitez enregistrent sur votre ordinateur ou appareil mobile. Ils permettent au site web de se souvenir de vos actions et préférences (telles que la connexion, la langue, la taille de la police et d'autres préférences d'affichage) pendant une période de temps, afin que vous n'ayez pas à les saisir à nouveau chaque fois que vous revenez sur le site ou naviguez d'une page à l'autre."
+                },
+                usage: {
+                    title: "2. Comment utilisons-nous les cookies ?",
+                    text: "Nous utilisons des cookies pour :",
+                    items: {
+                        function: "Faire fonctionner correctement notre site web.",
+                        understand: "Comprendre comment vous utilisez notre site web afin de pouvoir l'améliorer.",
+                        remember: "Mémoriser vos préférences et paramètres.",
+                        improve: "Améliorer la vitesse et la sécurité du site."
+                    }
+                },
+                types: {
+                    title: "3. Types de cookies que nous utilisons",
+                    essential: {
+                        title: "Cookies Essentiels",
+                        text: "Ces cookies sont nécessaires au fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes. Ils ne sont généralement définis qu'en réponse à des actions que vous effectuez et qui équivalent à une demande de services, telles que la définition de vos préférences de confidentialité, la connexion ou le remplissage de formulaires."
+                    },
+                    performance: {
+                        title: "Cookies de Performance et d'Analyse",
+                        text: "Ces cookies nous permettent de compter les visites et les sources de trafic afin que nous puissions mesurer et améliorer les performances de notre site. Ils nous aident à savoir quelles pages sont les plus et les moins populaires et à voir comment les visiteurs se déplacent sur le site."
+                    }
+                },
+                management: {
+                    title: "4. Gestion des cookies",
+                    text: "Vous pouvez contrôler et/ou supprimer les cookies comme vous le souhaitez. Vous pouvez supprimer tous les cookies déjà présents sur votre ordinateur et vous pouvez configurer la plupart des navigateurs pour empêcher leur installation. Si vous le faites, cependant, vous devrez peut-être ajuster manuellement certaines préférences chaque fois que vous visitez un site et certains services et fonctionnalités peuvent ne pas fonctionner."
+                }
+            }
+        }
     }
 };

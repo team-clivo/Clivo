@@ -1,8 +1,392 @@
 @import "tailwindcss";
 
+/* Dark theme (default) */
 :root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+/* Light theme */
+html.light {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+/* Light theme overrides for Tailwind classes */
+html.light .bg-black {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-zinc-900 {
+  background-color: #f4f4f5 !important;
+}
+
+html.light .bg-zinc-900\/40,
+html.light .bg-zinc-900\/50,
+html.light .bg-zinc-900\/30 {
+  background-color: rgba(244, 244, 245, 0.5) !important;
+}
+
+html.light .bg-zinc-800 {
+  background-color: #e4e4e7 !important;
+}
+
+html.light .bg-zinc-950 {
+  background-color: #fafafa !important;
+}
+
+html.light .text-white {
+  color: #09090b !important;
+}
+
+/* Keep white text on colored backgrounds */
+html.light .bg-orange-600 .text-white,
+html.light .bg-orange-700 .text-white,
+html.light a.bg-orange-600,
+html.light a.bg-orange-700,
+html.light button.bg-orange-600,
+html.light button.bg-orange-700 {
+  color: #ffffff !important;
+}
+
+/* Hero Section overrides for Light Theme */
+html.light .hero-section .text-white {
+  color: #ffffff !important;
+}
+
+html.light .hero-section .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+html.light .hero-section .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Services Section overrides for Light Theme */
+html.light .services-section {
+  background-color: #ffffff !important;
+}
+
+html.light .services-section .group\/bento {
+  background-color: #f4f4f5 !important;
+  /* zinc-100 */
+  border-color: #e4e4e7 !important;
+  /* zinc-200 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light .services-section .text-white {
+  color: #18181b !important;
+  /* zinc-900 */
+}
+
+html.light .services-section .text-gray-300 {
+  color: #52525b !important;
+  /* zinc-600 */
+}
+
+html.light .services-section .text-neutral-600 {
+  color: #18181b !important;
+  /* zinc-900 */
+}
+
+html.light .services-section .text-neutral-200,
+html.light .services-section .dark\:text-neutral-200 {
+  color: #18181b !important;
+}
+
+html.light .services-section .text-neutral-300,
+html.light .services-section .dark\:text-neutral-300 {
+  color: #52525b !important;
+}
+
+html.light .services-cta-btn {
+  background-color: #27272a !important;
+  /* zinc-800 - Soft black */
+  color: #ffffff !important;
+}
+
+html.light .services-cta-btn:hover {
+  background-color: #3f3f46 !important;
+  /* zinc-700 */
+}
+
+html.light .text-gray-300 {
+  color: #52525b !important;
+}
+
+html.light .text-gray-400 {
+  color: #71717a !important;
+}
+
+/* Process Section overrides for Light Theme */
+html.light .process-section {
+  background-color: #f4f4f5 !important;
+  /* zinc-100 - More notable contrast */
+  color: #18181b !important;
+}
+
+html.light .process-section .text-white {
+  color: #18181b !important;
+}
+
+html.light .process-section .text-white\/60 {
+  color: #52525b !important;
+  /* zinc-600 */
+}
+
+html.light .process-section .text-white\/10 {
+  color: #d4d4d8 !important;
+  /* zinc-300 - Darker for visibility on darker bg */
+}
+
+html.light .process-section .group:hover .text-white\/10 {
+  color: #f97316 !important;
+  /* orange-500 on hover */
+}
+
+html.light .process-section .text-gray-300 {
+  color: #52525b !important;
+}
+
+html.light .process-section .group-hover\:text-white:hover {
+  color: #18181b !important;
+}
+
+html.light .process-cta-btn {
+  background-color: #27272a !important;
+  /* zinc-800 - Soft black */
+  color: #ffffff !important;
+}
+
+html.light .process-cta-btn:hover {
+  background-color: #3f3f46 !important;
+  /* zinc-700 */
+}
+
+/* Clients Section overrides for Light Theme */
+html.light .clients-section {
+  background-color: #f4f4f5 !important;
+  /* zinc-100 - Matches Process section */
+  border-bottom-color: #e4e4e7 !important;
+  /* zinc-200 */
+}
+
+html.light .clients-section .text-gray-300 {
+  color: #52525b !important;
+}
+
+html.light .clients-section .bg-white\/5 {
+  background-color: #ffffff !important;
+  /* White cards on light gray bg */
+  border-color: #e4e4e7 !important;
+}
+
+/* Testimonials Section overrides for Light Theme */
+html.light .testimonials-section {
+  background-color: #ffffff !important;
+  /* White - Alternating background */
+}
+
+html.light .testimonials-section .text-white {
+  color: #18181b !important;
+}
+
+html.light .testimonials-section .text-gray-300 {
+  color: #52525b !important;
+}
+
+html.light .testimonials-section .border-zinc-800 {
+  border-color: #e4e4e7 !important;
+  /* zinc-200 */
+}
+
+html.light .testimonials-section .bg-black {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* CTA Section - Dark Mode (default) */
+.cta-section {
+  background: linear-gradient(to bottom right, #7c2d12, #000000);
+  /* orange-900 to black */
+}
+
+/* CTA Section overrides for Light Theme */
+html.light .cta-section {
+  background: linear-gradient(to bottom right, #ffffff, #a1a1aa) !important;
+  /* White to Zinc-400 - More visible gradient */
+  color: #18181b !important;
+}
+
+html.light .cta-section .text-white {
+  color: #18181b !important;
+}
+
+html.light .cta-section .text-gray-300 {
+  color: #52525b !important;
+}
+
+html.light .cta-section .border-white\/10 {
+  border-color: #a1a1aa !important;
+  /* zinc-400 - More visible line */
+}
+
+/* Ensure CTA button keeps white text in light mode */
+html.light .cta-section .bg-orange-600 {
+  color: #ffffff !important;
+}
+
+html.light .border-white\/10 {
+  border-color: rgba(9, 9, 11, 0.1) !important;
+}
+
+/* Footer overrides for Light Theme */
+html.light footer {
+  background-color: #f4f4f5 !important;
+  /* zinc-100 */
+  color: #18181b !important;
+}
+
+html.light footer .text-white {
+  color: #18181b !important;
+}
+
+html.light footer .text-gray-300 {
+  color: #52525b !important;
+  /* zinc-600 */
+}
+
+html.light footer .border-gray-800 {
+  border-color: #e4e4e7 !important;
+  /* zinc-200 */
+}
+
+html.light footer .bg-white\/10 {
+  background-color: #18181b !important;
+  /* Dark icons bg in light mode */
+  color: #ffffff !important;
+  /* White icon color */
+}
+
+html.light footer .bg-white\/10:hover {
+  background-color: #ea580c !important;
+  /* orange-600 */
+  color: #ffffff !important;
+  /* Keep white on hover */
+}
+
+html.light footer a:hover {
+  color: #ea580c !important;
+  /* orange-600 */
+}
+
+/* Portfolio Page overrides for Light Theme */
+html.light .portfolio-page {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+}
+
+html.light .portfolio-page .text-white {
+  color: #18181b !important;
+}
+
+html.light .portfolio-page .text-gray-300 {
+  color: #52525b !important;
+  /* zinc-600 */
+}
+
+/* Portfolio Categories */
+html.light .portfolio-categories button:not(.bg-orange-600) {
+  background-color: #f4f4f5 !important;
+  /* zinc-100 */
+  color: #52525b !important;
+  /* zinc-600 */
+  border-color: #e4e4e7 !important;
+  /* zinc-200 */
+}
+
+html.light .portfolio-categories button:not(.bg-orange-600):hover {
+  background-color: #e4e4e7 !important;
+  /* zinc-200 */
+  color: #18181b !important;
+  /* zinc-900 */
+}
+
+/* Project Modal */
+html.light .project-modal {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+html.light .project-modal .text-white {
+  color: #18181b !important;
+}
+
+html.light .project-modal .text-gray-300 {
+  color: #52525b !important;
+}
+
+html.light .project-modal .bg-zinc-800 {
+  background-color: #f4f4f5 !important;
+  /* Light gray for image container */
+}
+
+html.light .project-modal .bg-white\/5 {
+  background-color: #f4f4f5 !important;
+  /* zinc-100 */
+  border-color: #e4e4e7 !important;
+}
+
+/* View Project Button (Dark bg, White text) */
+html.light .view-project-btn {
+  background-color: #18181b !important;
+  /* zinc-900 */
+  color: #ffffff !important;
+}
+
+html.light .view-project-btn:hover {
+  background-color: #ea580c !important;
+  /* orange-600 */
+}
+
+/* Close Modal Button (White bg, Dark icon) */
+html.light .close-modal-btn {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border-color: #e4e4e7 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+html.light .close-modal-btn:hover {
+  background-color: #f4f4f5 !important;
+}
+
+/* Project Category Badge */
+html.light .project-category-badge {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border-color: #e4e4e7 !important;
+}
+
+html.light .border-zinc-800 {
+  border-color: #d4d4d8 !important;
+}
+
+/* Portfolio CTA Button */
+html.light .portfolio-cta-btn {
+  background-color: #18181b !important;
+  /* zinc-900 */
+  color: #ffffff !important;
+}
+
+html.light .portfolio-cta-btn:hover {
+  background-color: #ea580c !important;
+  /* orange-600 */
+}
+
+html.light .border-zinc-700\/50 {
+  border-color: rgba(161, 161, 170, 0.5) !important;
 }
 
 @theme inline {
@@ -12,15 +396,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

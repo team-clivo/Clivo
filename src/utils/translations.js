@@ -20,6 +20,11 @@ export const translations = {
             navigation: "Navegación",
             rights: "© 2025 Clivo"
         },
+        theme: {
+            light: "Claro",
+            dark: "Oscuro",
+            system: "Sistema"
+        },
         home: {
             hero: {
                 badge: "Agencia de Desarrollo de Software",
@@ -39,7 +44,9 @@ export const translations = {
             },
             services: {
                 title: "Nuestros Servicios",
-                description: "Soluciones digitales\nde alto impacto",
+                subtitle: "Soluciones digitales de alto impacto",
+                description: "Combinamos diseño estratégico y tecnología de punta para crear productos que escalan.",
+                button: "Ver más detalles",
                 cards: {
                     web: {
                         title: "Desarrollo Web",
@@ -56,6 +63,18 @@ export const translations = {
                     cloud: {
                         title: "Cloud & DevOps",
                         desc: "Infraestructura robusta y despliegue continuo en la nube."
+                    },
+                    ai: {
+                        title: "IA & Automatización",
+                        desc: "Potenciamos tu negocio integrando soluciones de IA y machine learning para automatizar tareas y optimizar la toma de decisiones."
+                    },
+                    maintenance: {
+                        title: "Mantenimiento",
+                        desc: "Ofrecemos soporte técnico continuo y actualizaciones periódicas."
+                    },
+                    management: {
+                        title: "Sistemas de Gestión",
+                        desc: "Desarrollamos sistemas de gestión adaptados a tus necesidades."
                     }
                 }
             },
@@ -178,6 +197,11 @@ export const translations = {
             navigation: "Navigation",
             rights: "© 2025 Clivo"
         },
+        theme: {
+            light: "Light",
+            dark: "Dark",
+            system: "System"
+        },
         home: {
             hero: {
                 badge: "Software Development Agency",
@@ -197,7 +221,9 @@ export const translations = {
             },
             services: {
                 title: "Our Services",
-                description: "High-impact\ndigital solutions",
+                subtitle: "High-impact digital solutions",
+                description: "We combine strategic design and cutting-edge technology to create products that scale.",
+                button: "See more details",
                 cards: {
                     web: {
                         title: "Web Development",
@@ -214,6 +240,18 @@ export const translations = {
                     cloud: {
                         title: "Cloud & DevOps",
                         desc: "Robust infrastructure and continuous cloud deployment."
+                    },
+                    ai: {
+                        title: "AI & Automation",
+                        desc: "We empower your business by integrating AI and machine learning solutions to automate tasks and optimize decision-making."
+                    },
+                    maintenance: {
+                        title: "Maintenance",
+                        desc: "We offer continuous technical support and periodic updates."
+                    },
+                    management: {
+                        title: "Management Systems",
+                        desc: "We develop management systems tailored to your needs."
                     }
                 }
             },
@@ -322,6 +360,11 @@ export const translations = {
         }
     },
     fr: {
+        ...aboutTranslations.fr,
+        ...legalTranslations.fr,
+        ...servicesTranslations.fr,
+        ...portfolioTranslations.fr,
+        ...contactTranslations.fr,
         header: {
             home: "Accueil",
             about: "À propos",
@@ -330,6 +373,11 @@ export const translations = {
             contact: "Parlons",
             navigation: "Navigation",
             rights: "© 2025 Clivo"
+        },
+        theme: {
+            light: "Clair",
+            dark: "Sombre",
+            system: "Système"
         },
         home: {
             hero: {
@@ -350,7 +398,9 @@ export const translations = {
             },
             services: {
                 title: "Nos Services",
-                description: "Solutions numériques\nà fort impact",
+                subtitle: "Solutions numériques à fort impact",
+                description: "Nous combinons design stratégique et technologie de pointe pour créer des produits qui évoluent.",
+                button: "Voir plus de détails",
                 cards: {
                     web: {
                         title: "Développement Web",
@@ -367,6 +417,18 @@ export const translations = {
                     cloud: {
                         title: "Cloud & DevOps",
                         desc: "Infrastructure robuste et déploiement continu dans le cloud."
+                    },
+                    ai: {
+                        title: "IA & Automatisation",
+                        desc: "Nous optimisons votre entreprise en intégrant des solutions d'IA et de machine learning pour automatiser les tâches et optimiser la prise de décisions."
+                    },
+                    maintenance: {
+                        title: "Maintenance",
+                        desc: "Nous offrons un support technique continu et des mises à jour périodiques."
+                    },
+                    management: {
+                        title: "Systèmes de Gestion",
+                        desc: "Nous développons des systèmes de gestion adaptés à vos besoins."
                     }
                 }
             },

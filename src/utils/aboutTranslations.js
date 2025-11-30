@@ -158,5 +158,85 @@ export const aboutTranslations = {
                 button: "Contact us now"
             }
         }
+    },
+    fr: {
+        about: {
+            hero: {
+                badge: "À Propos",
+                title: {
+                    line1: "Nous transformons les idées en",
+                    line2: "réalité numérique"
+                },
+                description: "Nous sommes une équipe de développeurs et de designers passionnés par la création de logiciels qui non seulement fonctionnent, mais qui propulsent les entreprises vers l'avenir."
+            },
+            stats: {
+                experience: "Années d'expérience",
+                projects: "Projets réussis",
+                clients: "Clients satisfaits",
+                support: "Support technique"
+            },
+            who_we_are: {
+                badge: "Qui Nous Sommes",
+                title: {
+                    main: "Plus que des développeurs, nous sommes",
+                    highlight: "des partenaires stratégiques"
+                },
+                p1: "Clivo est né avec une mission claire : combler le fossé entre la complexité technologique et les besoins réels des entreprises. Nous ne sommes pas une usine de logiciels conventionnelle ; nous sommes un studio d'ingénierie numérique axé sur la qualité et l'impact.",
+                p2: "Nous croyons que le meilleur code est celui qui résout les problèmes. Notre équipe combine créativité, logique et obsession du détail pour livrer des produits qui non seulement ont fière allure, mais fonctionnent parfaitement et évoluent avec votre entreprise."
+            },
+            what_we_do: {
+                badge: "Ce Que Nous Faisons",
+                title: "Ingénierie numérique de haut niveau",
+                items: {
+                    web_mobile: "Développement d'applications web et mobiles sur mesure.",
+                    ui_ux: "Conception d'interfaces (UI/UX) centrées sur l'utilisateur.",
+                    modernization: "Modernisation des systèmes et transformation numérique.",
+                    consulting: "Conseil technologique et architecture logicielle."
+                },
+                cta: "Voir tous les services"
+            },
+            team: {
+                badge: "Notre Équipe",
+                title: "Les esprits derrière Clivo",
+                description: "Leadership technique et vision stratégique pour faire passer votre projet au niveau supérieur.",
+                founders: {
+                    luis: {
+                        role: "Co-Fondateur & Développeur Principal",
+                        bio: "Expert en architectures évolutives et développement frontend moderne. Son obsession du détail garantit que chaque pixel et chaque ligne de code servent un objectif."
+                    },
+                    emil: {
+                        role: "Co-Fondateur & Responsable Technique",
+                        bio: "Visionnaire technologique avec une vaste expérience en solutions full-stack. Il combine la logique backend avec une compréhension approfondie des besoins métiers."
+                    }
+                }
+            },
+            values: {
+                badge: "Nos Valeurs",
+                title: "Ce qui nous définit",
+                items: {
+                    innovation: {
+                        title: "Innovation",
+                        text: "Nous ne suivons pas les tendances, nous cherchons à les créer. Toujours à la pointe de la technologie."
+                    },
+                    commitment: {
+                        title: "Engagement",
+                        text: "Votre succès est notre succès. Nous nous impliquons à 100% dans chaque projet."
+                    },
+                    quality: {
+                        title: "Qualité",
+                        text: "Code propre, sécurisé et efficace. Nous ne prenons pas de raccourcis en matière d'excellence."
+                    },
+                    results: {
+                        title: "Résultats",
+                        text: "Nous nous concentrons sur des métriques réelles et sur le retour sur investissement de votre produit."
+                    }
+                }
+            },
+            cta: {
+                title: "Prêt à commencer ?",
+                description: "Parlons de votre projet et découvrons comment nous pouvons vous aider à atteindre vos objectifs.",
+                button: "Contactez-nous maintenant"
+            }
+        }
     }
 };

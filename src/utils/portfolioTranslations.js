@@ -148,5 +148,80 @@ export const portfolioTranslations = {
                 }
             }
         }
+    },
+    fr: {
+        portfolioPage: {
+            hero: {
+                badge: "Portfolio de Projets",
+                title: {
+                    line1: "Solutions qui",
+                    highlight: "transforment les entreprises"
+                },
+                description: "Histoires de succès qui démontrent notre capacité à livrer des résultats mesurables"
+            },
+            categories: {
+                all: "Tous",
+                web: "Développement Web",
+                mobile: "Applications Mobiles",
+                uiux: "Design UX/UI",
+                cloud: "Cloud & DevOps",
+                ai: "IA & Automatisation",
+                systems: "Systèmes de Gestion"
+            },
+            projects: {
+                agrogestor: {
+                    title: "AgroGestor",
+                    subtitle: "Gestion Agricole Intelligente",
+                    description: "AgroGestor est une plateforme numérique complète conçue pour révolutionner la gestion agricole moderne. Cette application web permet aux agriculteurs et aux entreprises du secteur agroalimentaire d'optimiser leurs processus de production grâce au contrôle en temps réel des cultures, des ressources et des données critiques. La plateforme intègre des technologies IoT pour la surveillance continue des conditions environnementales, des niveaux d'humidité du sol, de la température et d'autres paramètres vitaux. Avec un tableau de bord intuitif et des outils d'analyse prédictive, AgroGestor facilite la prise de décisions éclairées, améliore l'efficacité des ressources et maximise les rendements des cultures. De plus, il permet d'exporter les cultures dans un fichier CSV selon les filtres appliqués dans l'application. Il propose des plans d'adhésion évolutifs et des notifications en temps réel, avec un accent sur la sécurité, l'accessibilité et une expérience utilisateur intuitive.",
+                    shortDescription: "Plateforme numérique complète pour optimiser les processus de production agricole grâce au contrôle en temps réel des cultures, des ressources et de l'analyse prédictive avec intégration IoT.",
+                    category: "Systèmes de Gestion",
+                    features: {
+                        f1: "Tableau de bord interactif en temps réel",
+                        f2: "Gestion intégrale des cultures",
+                        f3: "Surveillance des ressources agricoles avec IoT",
+                        f4: "Rapports et analyse de données automatisés",
+                        f5: "Système d'alertes et de notifications"
+                    }
+                },
+                dashbite: {
+                    title: "DashBite",
+                    subtitle: "Plateforme de Commande et de Gestion",
+                    description: "DashBite est une plateforme fullstack conçue pour optimiser les commandes en ligne et la gestion des opérations pour les clients, les entreprises, les livreurs et les administrateurs. Elle intègre des modules complets incluant connexion et inscription, gestion de profils, catalogues de produits, commandes, adresses, favoris et panneaux d'administration avec rapports détaillés. La plateforme est conçue pour améliorer l'efficacité du flux de travail, offrant une expérience utilisateur fluide et accessible, avec un accent sur l'optimisation des processus opérationnels.",
+                    shortDescription: "Plateforme fullstack pour optimiser les commandes en ligne et la gestion des opérations avec des modules intégrés pour plusieurs types d'utilisateurs.",
+                    category: "Développement Web",
+                    features: {
+                        f1: "Gestion intégrale des commandes en ligne",
+                        f2: "Panneaux d'administration avec rapports",
+                        f3: "Système d'authentification et de profils",
+                        f4: "Catalogues interactifs et favoris",
+                        f5: "Interface multi-utilisateur optimisée"
+                    }
+                },
+                fintech: {
+                    title: "Prochainement",
+                    subtitle: "En Développement",
+                    description: "Plateforme fintech axée sur la démocratisation de l'accès aux services financiers grâce à la technologie blockchain et à l'analyse prédictive du risque de crédit.",
+                    category: "Applications Mobiles"
+                },
+                ai_concept: {
+                    title: "Prochainement",
+                    subtitle: "Concept",
+                    description: "Solution d'automatisation intelligente d'entreprise basée sur LLM pour l'optimisation des processus administratifs et du service client.",
+                    category: "IA & Automatisation"
+                }
+            },
+            ui: {
+                noProjects: "Aucun projet disponible dans cette catégorie.",
+                solutionImplemented: "Solution Mise en Œuvre",
+                viewProject: "Voir le Projet",
+                features: "Fonctionnalités",
+                technologies: "Technologies",
+                cta: {
+                    title: "Prêt à propulser votre entreprise ?",
+                    description: "Nous transformons les idées en solutions numériques à fort impact. Parlons de votre prochain projet.",
+                    button: "Demander une Consultation"
+                }
+            }
+        }
     }
 };

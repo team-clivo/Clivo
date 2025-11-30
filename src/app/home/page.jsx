@@ -58,7 +58,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section - Fixed Background + Scrolling Content */}
-      <section ref={heroRef} id="inicio" className="relative h-screen w-full overflow-hidden">
+      <section ref={heroRef} id="inicio" className="hero-section relative h-screen w-full overflow-hidden">
         {/* Fixed Background Image */}
         <div className="fixed inset-0 w-full h-full z-0">
           <Image
@@ -140,7 +140,7 @@ export default function HomePage() {
       <div className="relative z-10 bg-black shadow-2xl">
 
         {/* Services Section - Bento Grid (Dark) */}
-        <section id="servicios" className="py-16 md:py-32 px-4 sm:px-6 bg-zinc-900">
+        <section id="servicios" className="services-section py-16 md:py-32 px-4 sm:px-6 bg-zinc-900">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -150,11 +150,10 @@ export default function HomePage() {
             >
               <span className="text-orange-500 font-bold text-xs sm:text-sm uppercase tracking-widest mb-4 block">{t('home.services.title')}</span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Soluciones digitales <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">de alto impacto</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">{t('home.services.subtitle')}</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Combinamos diseño estratégico y tecnología de punta para crear productos que escalan.
+                {t('home.services.description')}
               </p>
             </motion.div>
 
@@ -205,8 +204,8 @@ export default function HomePage() {
                   className: "sm:col-span-2 lg:col-span-2",
                 },
                 {
-                  title: "IA & Automatización",
-                  description: "Potenciamos tu negocio integrando soluciones de IA y machine learning para automatizar tareas y optimizar la toma de decisiones.",
+                  title: t('home.services.cards.ai.title'),
+                  description: t('home.services.cards.ai.desc'),
                   header: (
                     <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl items-center justify-center relative overflow-hidden group/header">
                       <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover/header:opacity-100 transition-opacity duration-500" />
@@ -216,8 +215,8 @@ export default function HomePage() {
                   className: "sm:col-span-2 lg:col-span-2",
                 },
                 {
-                  title: "Mantenimiento",
-                  description: "Ofrecemos soporte técnico continuo y actualizaciones periódicas.",
+                  title: t('home.services.cards.maintenance.title'),
+                  description: t('home.services.cards.maintenance.desc'),
                   header: (
                     <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl items-center justify-center relative overflow-hidden group/header">
                       <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover/header:opacity-100 transition-opacity duration-500" />
@@ -227,8 +226,8 @@ export default function HomePage() {
                   className: "sm:col-span-1 lg:col-span-1",
                 },
                 {
-                  title: "Sistemas de Gestión",
-                  description: "Desarrollamos sistemas de gestión adaptados a tus necesidades.",
+                  title: t('home.services.cards.management.title'),
+                  description: t('home.services.cards.management.desc'),
                   header: (
                     <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl items-center justify-center relative overflow-hidden group/header">
                       <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover/header:opacity-100 transition-opacity duration-500" />
@@ -257,15 +256,15 @@ export default function HomePage() {
             </BentoGrid>
 
             <div className="flex justify-center mt-12">
-              <MagneticButton href="/services" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all duration-300 flex justify-center items-center">
-                Ver más detalles
+              <MagneticButton href="/services" className="services-cta-btn w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all duration-300 flex justify-center items-center">
+                {t('home.services.button')}
               </MagneticButton>
             </div>
           </div>
         </section>
 
         {/* Process Section - Scrollytelling (Dark) */}
-        <section id="proceso" className="py-16 md:py-32 px-4 sm:px-6 bg-black text-white relative overflow-hidden">
+        <section id="proceso" className="process-section py-16 md:py-32 px-4 sm:px-6 bg-black text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-orange-900/30 via-black to-black"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
@@ -279,7 +278,7 @@ export default function HomePage() {
                 <p className="text-lg sm:text-xl text-gray-300 font-light leading-relaxed mb-8 sm:mb-12">
                   {t('home.process.description')}
                 </p>
-                <MagneticButton href="/aboutus" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all duration-300 flex justify-center items-center">
+                <MagneticButton href="/aboutus" className="process-cta-btn w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all duration-300 flex justify-center items-center">
                   {t('home.process.button')}
                 </MagneticButton>
               </div>
@@ -332,7 +331,7 @@ export default function HomePage() {
         </section>
 
         {/* Clients Logo Section - Relocated Here */}
-        <section className="py-12 md:py-20 bg-black border-b border-white/10">
+        <section className="clients-section py-12 md:py-20 bg-black border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <p className="text-center text-gray-300 font-medium mb-8 sm:mb-12 uppercase tracking-widest text-xs sm:text-sm">{t('home.clients.title')}</p>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 transition-all duration-500">
@@ -378,7 +377,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section - Infinite Marquee (Dark) */}
-        <section id="testimonios" className="py-16 md:py-32 bg-zinc-900 overflow-hidden">
+        <section id="testimonios" className="testimonials-section py-16 md:py-32 bg-zinc-900 overflow-hidden">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20 px-4 sm:px-6">
             <span className="text-orange-600 font-bold text-xs sm:text-sm uppercase tracking-widest mb-4 block">{t('home.testimonials.label')}</span>
             <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">{t('home.testimonials.title')}</h2>
@@ -401,7 +400,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section (Dark Gradient) */}
-        <section className="py-16 md:py-32 px-4 sm:px-6 bg-gradient-to-br from-orange-900 to-black text-white relative overflow-hidden">
+        <section className="cta-section py-16 md:py-32 px-4 sm:px-6 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjIiIGZpbGw9IiNGOTczMTYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
 
           <div className="max-w-5xl mx-auto text-center relative z-10">
