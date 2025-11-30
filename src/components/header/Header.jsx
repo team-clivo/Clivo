@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight, Instagram, Globe, ChevronDown, Sun, Moon, Monitor } from "lucide-react";
 import { useLanguage } from '../../context/LanguageContext';
@@ -15,6 +16,12 @@ export default function Header() {
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
   const langMenuRef = useRef(null);
   const themeMenuRef = useRef(null);
+  const pathname = usePathname();
+
+  // Helper to determine if we are on Home page and at the top (Transparent header)
+  // In this state, we ALWAYS want white text/icons because the Hero is dark
+  // Using startsWith to handle potential sub-paths or trailing slashes
+  const isTransparentHome = (pathname === '/' || pathname?.startsWith('/home')) && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -117,7 +124,7 @@ export default function Header() {
         <div className="flex items-center gap-3 h-full">
           <Link href="/home" className="relative h-full flex items-center justify-center">
             <img
-              src={theme === 'light' ? '/logo.png' : '/logowhite.png'}
+              src={theme === 'light' && !isTransparentHome ? '/logo.png' : '/logowhite.png'}
               alt="Clivo logo"
               className="h-20 sm:h-24 w-auto object-contain transition-transform duration-300"
             />
@@ -130,8 +137,8 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`${!scrolled
-                ? 'text-white'
+              className={`${isTransparentHome
+                ? '!text-white'
                 : theme === 'light'
                   ? 'text-zinc-900'
                   : 'text-white'
@@ -142,110 +149,109 @@ export default function Header() {
             </Link>
           ))}
 
-          {/* Theme Switcher Desktop */}
-          <div className="relative mr-4" ref={themeMenuRef}>
-            <button
-              onClick={() => setThemeMenuOpen(!themeMenuOpen)}
-              className={`p-2 border rounded-lg transition-all duration-300 ${!scrolled
-                ? theme === 'light'
-                  ? 'bg-zinc-800/10 border-zinc-800/20 hover:bg-zinc-800/20 text-orange-500'
-                  : 'bg-white/10 border-white/20 hover:bg-white/20 text-orange-500'
-                : theme === 'light'
-                  ? 'bg-zinc-100 border-zinc-300 hover:bg-zinc-200 text-orange-500'
-                  : 'bg-zinc-900 border-zinc-800 hover:bg-zinc-800 text-orange-500'
-                }`}
-              aria-label="Theme menu"
-            >
-              {theme === 'light' ? <Sun className="w-5 h-5" /> : theme === 'dark' ? <Moon className="w-5 h-5" /> : <Monitor className="w-5 h-5" />}
-            </button>
+          {/* Settings Group (Theme & Language) */}
+          <div className="hidden lg:flex items-center gap-1 mr-6 pr-6 border-r border-zinc-200/20">
+            {/* Theme Switcher */}
+            <div className="relative" ref={themeMenuRef}>
+              <button
+                onClick={() => setThemeMenuOpen(!themeMenuOpen)}
+                className={`p-2 rounded-full transition-all duration-300 ${isTransparentHome
+                  ? '!text-white hover:bg-white/10 hover:text-white'
+                  : theme === 'light'
+                    ? 'text-zinc-600 hover:bg-zinc-100 hover:text-orange-500'
+                    : 'text-gray-300 hover:bg-white/10 hover:text-white'
+                  }`}
+                aria-label="Theme menu"
+              >
+                {theme === 'light' ? <Sun className="w-5 h-5" /> : theme === 'dark' ? <Moon className="w-5 h-5" /> : <Monitor className="w-5 h-5" />}
+              </button>
 
-            <AnimatePresence>
-              {themeMenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className={`absolute top-full right-0 mt-2 w-36 border rounded-xl shadow-xl overflow-hidden py-1 ${theme === 'light'
-                    ? 'bg-white border-zinc-200'
-                    : 'bg-zinc-900 border-zinc-800'
-                    }`}
-                >
-                  {[
-                    { id: 'light', label: t('theme.light') || 'Claro', icon: <Sun className="w-4 h-4" /> },
-                    { id: 'dark', label: t('theme.dark') || 'Oscuro', icon: <Moon className="w-4 h-4" /> },
-                    { id: 'system', label: t('theme.system') || 'Sistema', icon: <Monitor className="w-4 h-4" /> }
-                  ].map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => {
-                        setTheme(item.id);
-                        setThemeMenuOpen(false);
-                      }}
-                      className={`w-full px-4 py-2 text-left text-sm flex items-center gap-2 transition-colors ${theme === 'light'
-                        ? 'hover:bg-zinc-100'
-                        : 'hover:bg-zinc-800'
-                        } ${theme === item.id
-                          ? 'text-orange-500 font-medium'
-                          : theme === 'light' ? 'text-zinc-700' : 'text-gray-300'
-                        }`}
-                    >
-                      {item.icon}
-                      {item.label}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+              <AnimatePresence>
+                {themeMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className={`absolute top-full right-0 mt-2 w-36 border rounded-xl shadow-xl overflow-hidden py-1 ${theme === 'light'
+                      ? 'bg-white border-zinc-200'
+                      : 'bg-zinc-900 border-zinc-800'
+                      }`}
+                  >
+                    {[
+                      { id: 'light', label: t('theme.light') || 'Claro', icon: <Sun className="w-4 h-4" /> },
+                      { id: 'dark', label: t('theme.dark') || 'Oscuro', icon: <Moon className="w-4 h-4" /> },
+                      { id: 'system', label: t('theme.system') || 'Sistema', icon: <Monitor className="w-4 h-4" /> }
+                    ].map((item) => (
+                      <button
+                        key={item.id}
+                        onClick={() => {
+                          setTheme(item.id);
+                          setThemeMenuOpen(false);
+                        }}
+                        className={`w-full px-4 py-2 text-left text-sm flex items-center gap-2 transition-colors ${theme === 'light'
+                          ? 'hover:bg-zinc-100'
+                          : 'hover:bg-zinc-800'
+                          } ${theme === item.id
+                            ? 'text-orange-500 font-medium'
+                            : theme === 'light' ? 'text-zinc-700' : 'text-gray-300'
+                          }`}
+                      >
+                        {item.icon}
+                        {item.label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
-          {/* Language Switcher Desktop */}
-          <div className="relative ml-0" ref={langMenuRef}>
-            <button
-              onClick={() => setLangMenuOpen(!langMenuOpen)}
-              className={`flex items-center gap-2 px-3 py-1.5 border text-orange-500 rounded-lg transition-all duration-300 ${!scrolled
-                ? theme === 'light'
-                  ? 'bg-zinc-800/10 border-zinc-800/20 hover:bg-zinc-800/20'
-                  : 'bg-white/10 border-white/20 hover:bg-white/20'
-                : theme === 'light'
-                  ? 'bg-zinc-100 border-zinc-300 hover:bg-zinc-200'
-                  : 'bg-zinc-900 border-zinc-800 hover:bg-zinc-800'
-                }`}
-            >
-              <Globe className="w-4 h-4" />
-              <span className="text-sm font-medium uppercase">{language}</span>
-              <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${langMenuOpen ? 'rotate-180' : ''}`} />
-            </button>
+            {/* Language Switcher */}
+            <div className="relative" ref={langMenuRef}>
+              <button
+                onClick={() => setLangMenuOpen(!langMenuOpen)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-300 ${isTransparentHome
+                  ? 'text-white hover:bg-white/10 hover:text-white'
+                  : theme === 'light'
+                    ? 'text-zinc-600 hover:bg-zinc-100 hover:text-orange-500'
+                    : 'text-gray-300 hover:bg-white/10 hover:text-white'
+                  }`}
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium uppercase">{language}</span>
+                <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${langMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
 
-            <AnimatePresence>
-              {langMenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className={`absolute top-full right-0 mt-2 w-32 border rounded-xl shadow-xl overflow-hidden py-1 ${theme === 'light'
-                    ? 'bg-white border-zinc-200'
-                    : 'bg-zinc-900 border-zinc-800'
-                    }`}
-                >
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLanguageSelect(lang.code)}
-                      className={`w-full px-4 py-2 text-left text-sm flex items-center gap-2 transition-colors ${theme === 'light'
-                        ? 'hover:bg-zinc-100'
-                        : 'hover:bg-zinc-800'
-                        } ${language === lang.code
-                          ? 'text-orange-500 font-medium'
-                          : theme === 'light' ? 'text-zinc-700' : 'text-gray-300'
-                        }`}
-                    >
-                      <span>{lang.flag}</span>
-                      {lang.label}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+              <AnimatePresence>
+                {langMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className={`absolute top-full right-0 mt-2 w-32 border rounded-xl shadow-xl overflow-hidden py-1 ${theme === 'light'
+                      ? 'bg-white border-zinc-200'
+                      : 'bg-zinc-900 border-zinc-800'
+                      }`}
+                  >
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => handleLanguageSelect(lang.code)}
+                        className={`w-full px-4 py-2 text-left text-sm flex items-center gap-2 transition-colors ${theme === 'light'
+                          ? 'hover:bg-zinc-100'
+                          : 'hover:bg-zinc-800'
+                          } ${language === lang.code
+                            ? 'text-orange-500 font-medium'
+                            : theme === 'light' ? 'text-zinc-700' : 'text-gray-300'
+                          }`}
+                      >
+                        <span>{lang.flag}</span>
+                        {lang.label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
 
@@ -260,7 +266,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`lg:hidden p-2 ${theme === 'light' ? 'text-zinc-900' : 'text-white'} hover:text-orange-500 transition-colors focus:outline-none relative z-50`}
+          className={`lg:hidden p-2 ${isTransparentHome ? 'text-white' : (theme === 'light' ? 'text-zinc-900' : 'text-white')} hover:text-orange-500 transition-colors focus:outline-none relative z-50`}
           aria-label="Toggle menu"
         >
           <AnimatePresence mode="wait">

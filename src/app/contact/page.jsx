@@ -73,11 +73,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="contact-page min-h-screen bg-black">
       <Header />
 
       <div
-        className="min-h-screen bg-gradient-to-b from-gray-900 to-black px-6 pt-32 pb-16 relative overflow-hidden"
+        className="contact-hero-section min-h-screen bg-gradient-to-b from-gray-900 to-black px-6 pt-32 pb-16 relative overflow-hidden"
       >
         {/* Realistic Smoke Effect */}
 
@@ -101,7 +101,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto bg-zinc-900/50 backdrop-blur-xl rounded-3xl p-6 md:p-10 border border-white/10 shadow-2xl relative z-10"
+          className="contact-form-card max-w-4xl mx-auto bg-zinc-900/50 backdrop-blur-xl rounded-3xl p-6 md:p-10 border border-white/10 shadow-2xl relative z-10"
         >
           <form onSubmit={handleSubmit} className="space-y-5">
 
@@ -121,7 +121,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   placeholder={t('contactPage.form.name.placeholder')}
                   required
-                  className="w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all placeholder:text-gray-600 hover:border-white/20"
+                  className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all placeholder:text-gray-600 hover:border-white/20"
                 />
               </div>
 
@@ -138,7 +138,7 @@ export default function ContactPage() {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder={t('contactPage.form.company.placeholder')}
-                  className="w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all placeholder:text-gray-600 hover:border-white/20"
+                  className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all placeholder:text-gray-600 hover:border-white/20"
                 />
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   placeholder={t('contactPage.form.email.placeholder')}
                   required
-                  className="w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all placeholder:text-gray-600 hover:border-white/20"
+                  className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all placeholder:text-gray-600 hover:border-white/20"
                 />
               </div>
               <div className="group">
@@ -173,7 +173,7 @@ export default function ContactPage() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder={t('contactPage.form.phone.placeholder')}
-                  className="w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all placeholder:text-gray-600 hover:border-white/20"
+                  className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all placeholder:text-gray-600 hover:border-white/20"
                 />
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function ContactPage() {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all hover:border-white/20 cursor-pointer"
+                  className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all hover:border-white/20 cursor-pointer"
                 >
                   <option value="" className="bg-gray-900">{t('contactPage.form.service.placeholder')}</option>
                   <option value="desarrollo-web" className="bg-gray-900">{t('contactPage.form.service.options.web')}</option>
@@ -213,7 +213,7 @@ export default function ContactPage() {
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all hover:border-white/20 cursor-pointer"
+                  className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all hover:border-white/20 cursor-pointer"
                 >
                   <option value="" className="bg-gray-900">{t('contactPage.form.budget.placeholder')}</option>
                   <option value="100-500" className="bg-gray-900">{t('contactPage.form.budget.options.range1')}</option>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                 placeholder={t('contactPage.form.message.placeholder')}
                 rows="4"
                 required
-                className="w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all resize-none placeholder:text-gray-600 hover:border-white/20"
+                className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all resize-none placeholder:text-gray-600 hover:border-white/20"
               />
             </div>
 

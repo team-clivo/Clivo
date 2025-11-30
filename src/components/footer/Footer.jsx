@@ -30,7 +30,7 @@ export default function Footer() {
                                 href="https://www.instagram.com/teamclivo"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                                className="footer-social-btn w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
                                 aria-label="Instagram"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
