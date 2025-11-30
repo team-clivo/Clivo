@@ -124,7 +124,10 @@ export default function Header() {
         <div className="flex items-center gap-3 h-full">
           <Link href="/home" className="relative h-full flex items-center justify-center">
             <img
-              src={mobileMenuOpen ? '/logowhite.png' : (theme === 'light' && !isTransparentHome) ? '/logo.png' : '/logowhite.png'}
+              src={mobileMenuOpen
+                ? (theme === 'light' ? '/logo.png' : '/logowhite.png')
+                : (theme === 'light' && !isTransparentHome) ? '/logo.png' : '/logowhite.png'
+              }
               alt="Clivo logo"
               className="h-15 sm:h-16 lg:h-20 w-auto object-contain transition-transform duration-300"
             />
@@ -266,7 +269,10 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`lg:hidden p-2 ${mobileMenuOpen ? '!text-white' : (isTransparentHome ? '!text-white' : (theme === 'light' ? 'text-zinc-900' : 'text-white'))} hover:text-orange-500 transition-colors focus:outline-none relative z-50`}
+          className={`lg:hidden p-2 ${mobileMenuOpen
+              ? (theme === 'light' ? 'text-zinc-900' : '!text-white')
+              : (isTransparentHome ? '!text-white' : (theme === 'light' ? 'text-zinc-900' : 'text-white'))
+            } hover:text-orange-500 transition-colors focus:outline-none relative z-50`}
           aria-label="Toggle menu"
         >
           <AnimatePresence mode="wait">
