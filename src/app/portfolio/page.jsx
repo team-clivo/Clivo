@@ -100,7 +100,7 @@ export default function PortfolioPage() {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <div className="portfolio-page min-h-screen bg-black text-white">
+    <div className="portfolio-page min-h-dvh bg-black text-white">
       <Header />
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-6 overflow-hidden">
@@ -298,7 +298,7 @@ export default function PortfolioPage() {
             {/* Scrollable Content */}
             <div className="overflow-y-auto max-h-[85vh]">
               {/* Hero Image */}
-              <div className="relative h-64 w-full bg-zinc-800">
+              <div className="project-modal-hero relative h-64 w-full bg-zinc-800">
                 <Image
                   src={selectedProject.image}
                   alt={selectedProject.title}

@@ -8,7 +8,7 @@ export default function CookiesPage() {
     const { t } = useLanguage();
 
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-orange-500 selection:text-white">
+        <div className="min-h-dvh bg-black text-white selection:bg-orange-500 selection:text-white">
             <Header />
 
             <div className="max-w-4xl mx-auto px-6 py-32">

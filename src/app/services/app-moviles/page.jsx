@@ -7,7 +7,7 @@ import { Smartphone, CheckCircle, Target, Zap } from 'lucide-react';
 
 export default function AppMovilesPage() {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-dvh bg-white">
             {/* Header */}
             <Header />
 

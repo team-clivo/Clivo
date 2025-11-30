@@ -7,7 +7,7 @@ import { Cloud, CheckCircle, Target, Zap } from 'lucide-react';
 
 export default function CloudDevOpsPage() {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-dvh bg-white">
             {/* Header */}
             <Header />
 

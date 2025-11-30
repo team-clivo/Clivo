@@ -62,8 +62,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
+        {/* Theme initialization script - prevents flash on load */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme') || 'system';
+                  var isDark = theme === 'dark' || 
+                    (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                  
+                  document.documentElement.classList.toggle('light', !isDark);
+                  document.documentElement.classList.toggle('dark', isDark);
+                } catch (e) {}
+              })();
+            `
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -121,6 +138,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

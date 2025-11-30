@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Mail, User, Building2, Phone, DollarSign, MessageSquare, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from '../../context/LanguageContext';
+import CustomSelect from "../../components/ui/CustomSelect";
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -72,12 +73,31 @@ export default function ContactPage() {
     }
   };
 
+  const serviceOptions = [
+    { value: "desarrollo-web", label: t('contactPage.form.service.options.web') },
+    { value: "apps-moviles", label: t('contactPage.form.service.options.mobile') },
+    { value: "diseno-ux-ui", label: t('contactPage.form.service.options.uiux') },
+    { value: "cloud-devops", label: t('contactPage.form.service.options.cloud') },
+    { value: "ia-automatizacion", label: t('contactPage.form.service.options.ai') },
+    { value: "mantenimiento", label: t('contactPage.form.service.options.maintenance') },
+    { value: "desarrollo-sistemas", label: t('contactPage.form.service.options.systems') },
+    { value: "otro", label: t('contactPage.form.service.options.other') }
+  ];
+
+  const budgetOptions = [
+    { value: "100-500", label: t('contactPage.form.budget.options.range1') },
+    { value: "500-1000", label: t('contactPage.form.budget.options.range2') },
+    { value: "1000-3000", label: t('contactPage.form.budget.options.range3') },
+    { value: "3000-4000", label: t('contactPage.form.budget.options.range4') },
+    { value: "4000+", label: t('contactPage.form.budget.options.range5') }
+  ];
+
   return (
-    <div className="contact-page min-h-screen bg-black">
+    <div className="contact-page min-h-dvh bg-black">
       <Header />
 
       <div
-        className="contact-hero-section min-h-screen bg-gradient-to-b from-gray-900 to-black px-6 pt-32 pb-16 relative overflow-hidden"
+        className="contact-hero-section min-h-dvh bg-gradient-to-b from-gray-900 to-black px-6 pt-32 pb-16 relative overflow-hidden"
       >
         {/* Realistic Smoke Effect */}
 
@@ -178,6 +198,8 @@ export default function ContactPage() {
               </div>
             </div>
 
+
+
             {/* Servicio y Presupuesto */}
             <div className="grid md:grid-cols-2 gap-5">
               <div className="group">
@@ -185,22 +207,15 @@ export default function ContactPage() {
                   <MessageSquare className="w-4 h-4 text-orange-500" />
                   {t('contactPage.form.service.label')} <span className="text-orange-500">*</span>
                 </label>
-                <select
-                  id="service"
+                <CustomSelect
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
+                  options={serviceOptions}
+                  placeholder={t('contactPage.form.service.placeholder')}
+                  icon={MessageSquare}
                   required
-                  className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all hover:border-white/20 cursor-pointer"
-                >
-                  <option value="" className="bg-gray-900">{t('contactPage.form.service.placeholder')}</option>
-                  <option value="desarrollo-web" className="bg-gray-900">{t('contactPage.form.service.options.web')}</option>
-                  <option value="apps-moviles" className="bg-gray-900">{t('contactPage.form.service.options.mobile')}</option>
-                  <option value="diseno-ux-ui" className="bg-gray-900">{t('contactPage.form.service.options.uiux')}</option>
-                  <option value="cloud-devops" className="bg-gray-900">{t('contactPage.form.service.options.cloud')}</option>
-                  <option value="ia-automatizacion" className="bg-gray-900">{t('contactPage.form.service.options.ai')}</option>
-                  <option value="mantenimiento" className="bg-gray-900">{t('contactPage.form.service.options.maintenance')}</option>
-                </select>
+                />
               </div>
 
               <div className="group">
@@ -208,19 +223,14 @@ export default function ContactPage() {
                   <DollarSign className="w-4 h-4 text-orange-500" />
                   {t('contactPage.form.budget.label')}
                 </label>
-                <select
-                  id="budget"
+                <CustomSelect
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
-                  className="contact-input w-full px-4 py-3 bg-black/40 text-white text-base rounded-xl border border-white/10 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all hover:border-white/20 cursor-pointer"
-                >
-                  <option value="" className="bg-gray-900">{t('contactPage.form.budget.placeholder')}</option>
-                  <option value="100-500" className="bg-gray-900">{t('contactPage.form.budget.options.range1')}</option>
-                  <option value="500-1000" className="bg-gray-900">{t('contactPage.form.budget.options.range2')}</option>
-                  <option value="1000-3000" className="bg-gray-900">{t('contactPage.form.budget.options.range3')}</option>
-                  <option value="3000+" className="bg-gray-900">{t('contactPage.form.budget.options.range4')}</option>
-                </select>
+                  options={budgetOptions}
+                  placeholder={t('contactPage.form.budget.placeholder')}
+                  icon={DollarSign}
+                />
               </div>
             </div>
 

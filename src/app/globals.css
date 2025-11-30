@@ -40,12 +40,19 @@ html.light .text-white {
 }
 
 /* Keep white text on colored backgrounds */
+/* Keep white text on colored backgrounds */
 html.light .bg-orange-600 .text-white,
 html.light .bg-orange-700 .text-white,
-html.light a.bg-orange-600,
-html.light a.bg-orange-700,
-html.light button.bg-orange-600,
-html.light button.bg-orange-700 {
+html.light .from-orange-500 .text-white,
+html.light .from-orange-600 .text-white,
+html.light a.bg-orange-600.text-white,
+html.light a.bg-orange-700.text-white,
+html.light button.bg-orange-600.text-white,
+html.light button.bg-orange-700.text-white,
+html.light a.from-orange-500.text-white,
+html.light a.from-orange-600.text-white,
+html.light button.from-orange-500.text-white,
+html.light button.from-orange-600.text-white {
   color: #ffffff !important;
 }
 
@@ -60,6 +67,14 @@ html.light .hero-section .text-gray-300 {
 
 html.light .hero-section .text-white\/70 {
   color: rgba(255, 255, 255, 0.7) !important;
+}
+
+html.light .hero-section .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.light .hero-section .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Services Section overrides for Light Theme */
@@ -263,17 +278,17 @@ html.light footer .border-gray-800 {
 }
 
 html.light footer .footer-social-btn {
-  background-color: #18181b !important;
-  /* Dark icons bg in light mode */
-  color: #ffffff !important;
-  /* White icon color */
+  background-color: rgba(24, 24, 27, 0.05) !important;
+  /* Light bg in light mode - zinc-900/5 */
+  color: #18181b !important;
+  /* Dark icon color - zinc-900 */
 }
 
 html.light footer .footer-social-btn:hover {
   background-color: #ea580c !important;
   /* orange-600 */
   color: #ffffff !important;
-  /* Keep white on hover */
+  /* White on hover */
 }
 
 html.light footer a:hover {
@@ -336,6 +351,15 @@ html.light .project-modal .bg-white\/5 {
   background-color: #f4f4f5 !important;
   /* zinc-100 */
   border-color: #e4e4e7 !important;
+}
+
+/* Modal Hero Text - Always White */
+html.light .project-modal-hero .text-white {
+  color: #ffffff !important;
+}
+
+html.light .project-modal-hero .text-gray-300 {
+  color: #d1d5db !important;
 }
 
 /* View Project Button (Dark bg, White text) */
@@ -438,6 +462,40 @@ html.light .contact-input option {
 
 html.light .border-zinc-700\/50 {
   border-color: rgba(161, 161, 170, 0.5) !important;
+}
+
+/* CustomSelect overrides for Light Theme */
+html.light .custom-select-dropdown {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+  /* zinc-200 */
+}
+
+html.light .custom-select-option {
+  color: #52525b !important;
+  /* zinc-600 */
+}
+
+/* Hover for unselected options */
+html.light .custom-select-option:hover {
+  background-color: #ffedd5 !important;
+  /* orange-100 */
+  color: #ea580c !important;
+  /* orange-600 */
+}
+
+/* Selected option - Normal state */
+html.light .custom-select-option[data-selected="true"] {
+  background-color: #f97316 !important;
+  /* orange-500 */
+  color: #ffffff !important;
+}
+
+/* Selected option - Hover state (Keep it solid/darker) */
+html.light .custom-select-option[data-selected="true"]:hover {
+  background-color: #ea580c !important;
+  /* orange-600 */
+  color: #ffffff !important;
 }
 
 @theme inline {

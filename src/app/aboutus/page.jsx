@@ -13,7 +13,7 @@ export default function AboutPage() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-orange-500 selection:text-white">
+    <div className="min-h-dvh bg-black text-white selection:bg-orange-500 selection:text-white">
       <Header />
 
       {/* Hero Section */}

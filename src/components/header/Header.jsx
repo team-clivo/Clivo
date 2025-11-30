@@ -87,7 +87,7 @@ export default function Header() {
     },
     open: {
       opacity: 1,
-      height: "100vh",
+      height: "100dvh",
       transition: {
         duration: 0.4,
         ease: "easeInOut",
@@ -119,14 +119,14 @@ export default function Header() {
         : "bg-transparent"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
+      <div className="max-w-7xl mx-auto px-6 h-16 lg:h-20 flex items-center justify-between relative z-50">
         {/* Logo */}
         <div className="flex items-center gap-3 h-full">
           <Link href="/home" className="relative h-full flex items-center justify-center">
             <img
-              src={theme === 'light' && !isTransparentHome ? '/logo.png' : '/logowhite.png'}
+              src={mobileMenuOpen || (theme === 'light' && !isTransparentHome) ? '/logo.png' : '/logowhite.png'}
               alt="Clivo logo"
-              className="h-20 sm:h-24 w-auto object-contain transition-transform duration-300"
+              className="h-15 sm:h-16 lg:h-20 w-auto object-contain transition-transform duration-300"
             />
           </Link>
         </div>
@@ -150,7 +150,7 @@ export default function Header() {
           ))}
 
           {/* Settings Group (Theme & Language) */}
-          <div className="hidden lg:flex items-center gap-1 mr-6 pr-6 border-r border-zinc-200/20">
+          <div className={`hidden lg:flex items-center gap-1 mr-6 pr-6 border-r ${isTransparentHome ? 'border-white/20' : theme === 'light' ? 'border-zinc-300' : 'border-white/20'}`}>
             {/* Theme Switcher */}
             <div className="relative" ref={themeMenuRef}>
               <button
@@ -210,7 +210,7 @@ export default function Header() {
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-300 ${isTransparentHome
-                  ? 'text-white hover:bg-white/10 hover:text-white'
+                  ? '!text-white hover:bg-white/10 hover:text-white'
                   : theme === 'light'
                     ? 'text-zinc-600 hover:bg-zinc-100 hover:text-orange-500'
                     : 'text-gray-300 hover:bg-white/10 hover:text-white'
@@ -266,7 +266,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`lg:hidden p-2 ${isTransparentHome ? 'text-white' : (theme === 'light' ? 'text-zinc-900' : 'text-white')} hover:text-orange-500 transition-colors focus:outline-none relative z-50`}
+          className={`lg:hidden p-2 ${mobileMenuOpen ? 'text-zinc-900' : (isTransparentHome ? '!text-white' : (theme === 'light' ? 'text-zinc-900' : 'text-white'))} hover:text-orange-500 transition-colors focus:outline-none relative z-50`}
           aria-label="Toggle menu"
         >
           <AnimatePresence mode="wait">
@@ -303,7 +303,7 @@ export default function Header() {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed inset-0 bg-zinc-950 z-40 lg:hidden flex flex-col pt-28 px-8 pb-10"
+            className="fixed inset-0 bg-zinc-950 z-40 lg:hidden flex flex-col pt-28 px-8 pb-10 h-dvh"
           >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">

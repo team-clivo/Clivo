@@ -35,7 +35,9 @@ export const contactTranslations = {
                         uiux: "Diseño UX/UI",
                         cloud: "Cloud & DevOps",
                         ai: "IA & Automatización",
-                        maintenance: "Mantenimiento"
+                        maintenance: "Mantenimiento",
+                        systems: "Desarrollo de Sistemas",
+                        other: "Otro"
                     }
                 },
                 budget: {
@@ -45,7 +47,8 @@ export const contactTranslations = {
                         range1: "US$100 - US$500",
                         range2: "US$500 - US$1,000",
                         range3: "US$1,000 - US$3,000",
-                        range4: "Más de US$3,000"
+                        range4: "US$3,000 - US$4,000",
+                        range5: "Más de US$4,000"
                     }
                 },
                 message: {
@@ -107,7 +110,9 @@ export const contactTranslations = {
                         uiux: "UX/UI Design",
                         cloud: "Cloud & DevOps",
                         ai: "AI & Automation",
-                        maintenance: "Maintenance"
+                        maintenance: "Maintenance",
+                        systems: "Systems Development",
+                        other: "Other"
                     }
                 },
                 budget: {
@@ -117,7 +122,8 @@ export const contactTranslations = {
                         range1: "US$100 - US$500",
                         range2: "US$500 - US$1,000",
                         range3: "US$1,000 - US$3,000",
-                        range4: "More than US$3,000"
+                        range4: "US$3,000 - US$4,000",
+                        range5: "More than US$4,000"
                     }
                 },
                 message: {
@@ -179,7 +185,9 @@ export const contactTranslations = {
                         uiux: "Design UX/UI",
                         cloud: "Cloud & DevOps",
                         ai: "IA & Automatisation",
-                        maintenance: "Maintenance"
+                        maintenance: "Maintenance",
+                        systems: "Développement de Systèmes",
+                        other: "Autre"
                     }
                 },
                 budget: {
@@ -189,7 +197,8 @@ export const contactTranslations = {
                         range1: "100 $ - 500 $",
                         range2: "500 $ - 1 000 $",
                         range3: "1 000 $ - 3 000 $",
-                        range4: "Plus de 3 000 $"
+                        range4: "3 000 $ - 4 000 $",
+                        range5: "Plus de 4 000 $"
                     }
                 },
                 message: {

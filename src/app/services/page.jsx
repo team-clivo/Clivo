@@ -100,7 +100,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-orange-500 selection:text-white">
+    <div className="min-h-dvh bg-black text-white selection:bg-orange-500 selection:text-white">
       <Header />
 
       {/* Hero Section */}
@@ -139,9 +139,11 @@ export default function ServicesPage() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true, margin: "-100px" }}
+                {...(index === 0
+                  ? { animate: { opacity: 1, y: 0 } }
+                  : { whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-100px" } }
+                )}
+                transition={{ duration: 0.6, delay: index === 0 ? 0.2 : 0.1 }}
                 className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-20 items-center`}
               >
                 {/* Visual Side */}

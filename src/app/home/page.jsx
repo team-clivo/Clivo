@@ -53,12 +53,12 @@ export default function HomePage() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-orange-500 selection:text-white">
+    <div className="min-h-dvh bg-black text-white selection:bg-orange-500 selection:text-white">
       {/* Header Component */}
       <Header />
 
       {/* Hero Section - Fixed Background + Scrolling Content */}
-      <section ref={heroRef} id="inicio" className="hero-section relative h-screen w-full overflow-hidden">
+      <section ref={heroRef} id="inicio" className="hero-section relative h-dvh w-full overflow-hidden">
         {/* Fixed Background Image */}
         <div className="fixed inset-0 w-full h-full z-0">
           <Image

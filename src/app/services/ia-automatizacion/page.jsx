@@ -7,7 +7,7 @@ import { Bot, CheckCircle, Target, Zap } from 'lucide-react';
 
 export default function IAAutomatizacionPage() {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-dvh bg-white">
             {/* Header */}
             <Header />
 
