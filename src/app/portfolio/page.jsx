@@ -125,24 +125,26 @@ export default function PortfolioPage() {
         </div>
 
         {/* Filter Bar */}
-        <div className="portfolio-categories relative z-10 flex flex-wrap justify-center gap-3">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 border ${activeCategory === category.id
-                ? "bg-orange-600 text-white border-orange-500"
-                : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20"
-                }`}
-            >
-              {category.label}
-            </button>
-          ))}
+        <div className="portfolio-categories relative z-10 overflow-x-auto pb-2 scrollbar-hide">
+          <div className="flex gap-2 md:gap-3 justify-start md:justify-center min-w-max md:min-w-0 md:flex-wrap px-1">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`px-4 md:px-5 py-2 md:py-2.5 rounded-lg text-xs md:text-sm font-medium transition-all duration-300 border whitespace-nowrap ${activeCategory === category.id
+                  ? "bg-orange-600 text-white border-orange-500"
+                  : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20"
+                  }`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 px-6">
+      <section className="pt-8 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (
