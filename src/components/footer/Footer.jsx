@@ -74,7 +74,7 @@ export default function Footer() {
                         <h3 className="text-lg font-bold mb-6">{t('footer.company.title')}</h3>
                         <ul className="space-y-3">
                             <li><Link href="/portfolio" className={`transition-colors ${theme === 'light' ? 'text-zinc-600 hover:text-orange-500' : 'text-gray-300 hover:text-orange-500'}`}>{t('footer.company.items.portfolio')}</Link></li>
-                            <li><Link href="/aboutus" className={`transition-colors ${theme === 'light' ? 'text-zinc-600 hover:text-orange-500' : 'text-gray-300 hover:text-orange-500'}`}>{t('footer.company.items.about')}</Link></li>
+                            <li><Link href="/about" className={`transition-colors ${theme === 'light' ? 'text-zinc-600 hover:text-orange-500' : 'text-gray-300 hover:text-orange-500'}`}>{t('footer.company.items.about')}</Link></li>
                             <li><Link href="/contact" className={`transition-colors ${theme === 'light' ? 'text-zinc-600 hover:text-orange-500' : 'text-gray-300 hover:text-orange-500'}`}>{t('footer.company.items.contact')}</Link></li>
                         </ul>
                     </div>

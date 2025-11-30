@@ -278,7 +278,7 @@ export default function HomePage() {
                 <p className="text-lg sm:text-xl text-gray-300 font-light leading-relaxed mb-8 sm:mb-12">
                   {t('home.process.description')}
                 </p>
-                <MagneticButton href="/aboutus" className="process-cta-btn w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all duration-300 flex justify-center items-center">
+                <MagneticButton href="/about" className="process-cta-btn w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all duration-300 flex justify-center items-center">
                   {t('home.process.button')}
                 </MagneticButton>
               </div>
