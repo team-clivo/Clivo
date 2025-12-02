@@ -46,11 +46,16 @@ export default function HomePage() {
   });
   const { t } = useLanguage();
 
-  // Aggressive Zoom: Scales from 1 to 1.5 as you scroll
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
   // Text splits apart
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  // Force dark theme for this page
+  React.useEffect(() => {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+  }, []);
 
   return (
     <div className="min-h-dvh bg-black text-white selection:bg-orange-500 selection:text-white">
