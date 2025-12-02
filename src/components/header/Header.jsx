@@ -71,6 +71,7 @@ export default function Header() {
     { href: "/about", label: t('header.about') },
     { href: "/services", label: t('header.services') },
     { href: "/portfolio", label: t('header.portfolio') },
+    { href: "/faq", label: t('header.faq') },
   ];
 
   const menuVariants = {
@@ -270,8 +271,8 @@ export default function Header() {
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className={`lg:hidden p-2 ${mobileMenuOpen
-              ? (theme === 'light' ? 'text-zinc-900' : '!text-white')
-              : (isTransparentHome ? '!text-white' : (theme === 'light' ? 'text-zinc-900' : 'text-white'))
+            ? (theme === 'light' ? 'text-zinc-900' : '!text-white')
+            : (isTransparentHome ? '!text-white' : (theme === 'light' ? 'text-zinc-900' : 'text-white'))
             } hover:text-orange-500 transition-colors focus:outline-none relative z-50`}
           aria-label="Toggle menu"
         >

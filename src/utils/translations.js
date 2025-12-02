@@ -3,6 +3,7 @@ import { legalTranslations } from './legalTranslations';
 import { servicesTranslations } from './servicesTranslations';
 import { portfolioTranslations } from './portfolioTranslations';
 import { contactTranslations } from './contactTranslations';
+import { faqTranslations } from './faqTranslations';
 
 export const translations = {
     es: {
@@ -11,11 +12,13 @@ export const translations = {
         ...servicesTranslations.es,
         ...portfolioTranslations.es,
         ...contactTranslations.es,
+        ...faqTranslations.es,
         header: {
             home: "Inicio",
             about: "Nosotros",
             services: "Servicios",
             portfolio: "Portafolio",
+            faq: "FAQ",
             contact: "Hablemos",
             navigation: "Navegación",
             rights: "© 2025 Clivo"
@@ -188,11 +191,13 @@ export const translations = {
         ...servicesTranslations.en,
         ...portfolioTranslations.en,
         ...contactTranslations.en,
+        ...faqTranslations.en,
         header: {
             home: "Home",
             about: "About",
             services: "Services",
             portfolio: "Portfolio",
+            faq: "FAQ",
             contact: "Let's Talk",
             navigation: "Navigation",
             rights: "© 2025 Clivo"
@@ -365,11 +370,13 @@ export const translations = {
         ...servicesTranslations.fr,
         ...portfolioTranslations.fr,
         ...contactTranslations.fr,
+        ...faqTranslations.fr,
         header: {
             home: "Accueil",
             about: "À propos",
             services: "Services",
             portfolio: "Portfolio",
+            faq: "FAQ",
             contact: "Parlons",
             navigation: "Navigation",
             rights: "© 2025 Clivo"
